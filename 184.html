@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q184</title>
+    <style>
+        body {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>QUESTION 184</h3>
+
+    You are creating a JavaScript object that represents a customer. <br> <br>
+
+    You need to extend the Customer object by adding the GetCommission method. <br> <br>
+
+    You need to ensure that all future instances of the Customer object implement the GetCommission method. Which
+    code segment should you use? <br>
+
+    <xmp>
+
+        A. 
+            Customer.apply.GetCommission = function () {
+                alert('payroll');
+            }
+        B. 
+            Customer.Getcommission = function () {
+                alert('payroll');
+            }
+        C. 
+            Customer.prototype.Getcommission = function Customer.GetCommission()
+            {
+                alert('payroll');
+            }
+        D. 
+            Customer.prototype.GetCommission = function () {
+                alert('payroll');
+            }
+    </xmp>
+    <h3>Correct Answer: D</h3>
+    Section: Volume D <br>
+    Explanation/Reference:
+    <strong>Explanation: <br>
+        * Object.prototype.constructor <br>
+        Returns a reference to the Object function that created the instance's prototype. <br> Note that the value of this
+        property is a reference to the function itself, not a string containing the function's name. <br> The value is only
+        read-only for primitive values such as 1, true and "test". <br>
+        * The constructor property is created together with the function as a single property of func.prototype.
+    </strong> <br>
+    Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
+
+</body>
+
+</html>

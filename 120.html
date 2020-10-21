@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Q120</title>
+	<script>
+		function DataHandler() {
+			//var webReq = new XMLHttpRequest; {
+				//if (webReq.readyState == 4) { //4
+				if(this.readyState == 4) {
+				    //if (webReq.status == 200) { //200
+					if (this.status == 200) { //200
+						document.getElementById("Output").innerHTML = (this.responseText);
+						//document.getElementById("Output").innerHTML = (webReq.responseText);
+					}
+				}
+			//}
+		}
+		function textAJAX() {
+			var webReq = getXMLHttpRequest();
+			if (webReq != null) {
+				webReq.open("GET", "./products.xml", true);
+				//webReq.onreadystatechange = DataHandler();
+				webReq.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("Output").innerHTML = (this.responseText);
+					}
+				}
+				webReq.send();
+				//xmlDoc = webReq.responseText;
+				//alert(xmlDoc);
+			}
+		}
+		function getXMLHttpRequest() {
+			if (window.XMLHttpRequest) {
+				return new XMLHttpRequest();
+			}
+			else {
+				try {
+					return new (ActiveXObject)("MSXML2.XMLHTTP.3.0");
+				} catch (e) { return null; }
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h3>QUESTION 120</h3>
+	<p>
+		HOTSPOT</p><br>
+	<p>
+		A company has an XML file named products.xml on a web server. The file contains a list of the products that the
+		company sells.</p>
+	<p>
+		You need to display the contents of the products.xml file in a DIV element named Output.</p>
+	<p>
+		How should you complete the relevant code? (To answer, select the appropriate option from each drop-down list in
+		the answer area.)</p>
+
+	LAS OPCIONES POSIBLES QUE DAN PARA PONER EN EL <em>WebReq</em> son:
+	<ul>
+		<li>abort</li>
+		<li>open</li>
+		<li>status</li>
+		<li>readyState</li>
+	</ul>
+
+	Y las opciones de comparación son:
+	<ul>
+		<li>false</li>
+		<li>true</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+
+	Las opciones para comparar con el status son:
+	<ul>
+		<li>100</li>
+		<li>200</li>
+		<li>400</li>
+		<li>500</li>
+	</ul>
+
+	Aqui hay que hacer drag an drop
+	<p>
+		Hot Area:
+		<xmp>
+			<html>
+
+			<head>
+				<script lang="JavaScript">
+					function DataHandler() {
+						var webReq = new XMLHttpRequest; {
+							if (webReq.readyState == 4) { 
+								if (webReq.status == 200) {
+									document.getElementByld("Output").innerHTML = (webReq.responseText);
+								}
+							}
+						}
+						var webReq = getXMLHttpRequest();
+						if (webReq != null) {
+							webReq.open("GET", "http://localhost/products.xml", true);
+							webReq.onreadystatechange = DataHandler;
+							webReq.send();
+						}
+					}
+				</script>
+			</head>
+
+			<body>
+				<div id="output"> </div>
+			</body>
+
+			</html>
+		</xmp>
+
+
+
+		Section: Volume C
+		Explanation
+		Explanation / Reference:
+
+		Explanation:
+		When readyState is 4 and status is 200, the response is ready:
+
+		Example
+		<xmp>
+			<script>
+				xmlhttp.onreadystatechange = function () {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+					}
+				}
+			</script>
+		</xmp>
+		<xmp>
+			open(method, url, async)	Specifies the type of request
+										method: the type of request: GET or POST
+										url: the server (file) location
+										async: true (asynchronous) or false (synchronous)
+			Note:
+			* readyState == 4
+			Holds the status of the XMLHttpRequest.Changes from 0 to 4:
+			0: request not initialized
+			1: server connection established
+			2: request received
+			3: processing request
+			4: request finished and response is ready
+
+			* status == 200
+			200: "OK"
+			404: Page not found
+		</xmp>
+		<a href="https://www.quanzhanketang.com/ajax/ajax_xmlhttprequest_onreadystatechange.html">Reference</a>
+	<h3>Demostración:</h3>
+	<div id="Output"></div>
+	<button onclick="textAJAX()">Test</button>
+</body>
+
+</html>

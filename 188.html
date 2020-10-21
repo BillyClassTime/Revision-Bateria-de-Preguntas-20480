@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q188</title>
+    <style>
+        body {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>QUESTION 188</h4>
+
+    Your company uses a third-party component that generates HTML for a website. The third-party component creates
+    DIV elements that display a yellow background. <br> <br>
+
+    The third-party component uses inline styles in the DIV elements that are inconsistent with your corporate
+    standards. You must override the DIV elements in the style sheet with the corporate styles. <br> <br>
+
+    You need to ensure that the website meets corporate standards. <br> <br>
+
+    Which style should you use? <br>
+
+    <xmp>
+        A.
+            #alldiv {  /* apply to HTML element with id="alldiv"*/
+                background: blue;
+                font: 12px/22px Arial, sans-serif;
+            }
+        B
+            div p:only-child {
+                background: blue;
+                font: 12px/22px Arial, sans-serif;
+            }
+
+        C. 
+            div {
+                background: blue !important;
+                font: 12px/22px Arial, sans-serif !important;
+            }
+        D.
+            div {
+                background: blue;
+                font: 12px/22px Arial, sans-serif;
+            }
+    </xmp>
+
+
+    <h4>Correct Answer: C</h4>
+    Section: Volume D
+    <br>
+    Explanation/Reference: <br> <strong>
+    Explanation: <br>
+    CSS attempts to create a balance of power between author and user style sheets. By default, rules in an author's
+    style sheet override those in a user's style sheet. <br>
+    However, for balance, an "!important" declaration (the delimiter token "!" and keyword "important" follow the declaration) takes precedence over a normal declaration. Both author and user style sheets may contain
+    "!important" declarations, and user "!important" rules override author "!important" rules. This CSS feature improves accessibility of documents by giving users with special requirements (large fonts, color combinations, etc.) control over presentation.
+    </strong> <br>
+    <xmp>
+        /* From the user's style sheet */
+        p { text-indent: 1em ! important }
+        p { font-style: italic ! important }
+        p { font-size: 18pt }
+
+        /* From the author's style sheet */
+        p { text-indent: 1.5em !important }
+        p { font: normal 12pt sans-serif !important }
+        p { font-size: 24pt }
+    </xmp>
+    References:
+    https://www.w3.org/TR/CSS21/cascade.html#important-rules
+    <br>
+    Final Note:
+    If you lean too heavily on the !important declaration to achieve your desired styles, you will eventually have a style sheet littered with !important styles. You will be fundamentally changing the way that page's CSS is processed. It is a lazy practice that is not good from a long-term management standpoint.
+    <br>
+    Use !important for testing or, in some cases, when you absolutely must override an inline style that is part of a theme or template framework. Even in those cases, use this approach sparingly and instead write clean style sheets that honor the cascade.
+</body>
+
+</html>

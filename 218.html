@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q218</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /*Opcion A*/
+        /*tr:first-line,
+        tr:last-child {
+            background-color: cyan;
+        }*/
+        /*Opcion B
+        tr [line|=0,1,3] {
+            background-color: blue;
+        }*/
+        /*Opcion C
+        tr:nth-child(0):in-range,tr:nth-child(3):in-range
+        {
+            background-color: blue;
+        }Opcion D*/
+        /*tr:nth-child(3n+1) {
+            background-color:cyan;
+        }*/
+    </style>
+    <script>
+        function testD()
+        {
+            $("tr:nth-child(3n+1)").css("background-color","cyan");
+        }
+        function testC()
+        {
+            $("tr:nth-child(0):in-range,tr:nth-child(3):in-range").css("background-color","blue");
+        }
+        function testB()
+        {
+           $("tr [line|=0,1,3]").css("background-color","blue");
+        }
+        function testA()
+        {
+            $("tr:first-line,tr:last-child").css("background-color","cyan");
+        }
+    </script>
+</head>
+
+<body>
+    <h3>QUESTION 218</h3>
+    <p>
+        You develop an HTML application that contains a table that displays a list of products. The table is defined
+        with the following HTML markup:</p>
+    <xmp>
+        <table id="t1">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Adjustable Race</td>
+                </tr>
+                <tr>
+                    <td>Blade</td>
+                </tr>
+                <tr>
+                    <td>Chainring</td>
+                </tr>
+                <tr>
+                    <td>Down Tube</td>
+                </tr>
+            </tbody>
+        </table>
+    </xmp>
+    You must style the table to look like the following image: <br>
+    <img src="./img/218.jpg" style="height: 100px; width: 100px;">
+    <br>
+    You need to implement the CSS selectors to select the rows that must have a blue background.
+    <br>
+    Which CSS selector should you use?
+    <p>A.</p> tr : first-line, tr :last-child
+    <p>B.</p> tr[line |=0, 1, 3]
+    <p>C.</p> tr:nth-child (0) : in-range, tr:nth-child(3):in-range
+    <p>D.</p> tr:nth-child(3n+1){background-color:blue;}
+    <h4>Correct Answer: D</h4>
+    <a href="https://www.w3schools.com/jquery/sel_nthchild.asp">Referencia en w3schools</a>
+    <div>Refresque la página después de cada opción para quitar la regla CSS3</div>
+    <button onclick=testA()>Opcion A</button>
+    <button onclick=testB()>Opcion B</button>
+    <button onclick=testC()>Opcion C</button>
+    <button onclick=testD()>Opcion D</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adjustable Race</td>
+            </tr>
+            <tr>
+                <td>Blade</td>
+            </tr>
+            <tr>
+                <td>Chainring</td>
+            </tr>
+            <tr>
+                <td>Down Tube</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

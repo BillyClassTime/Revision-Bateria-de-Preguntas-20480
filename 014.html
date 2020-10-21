@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q014</title>
+</head>
+
+<body>
+
+    <p>
+        QUESTION 14 <br>
+
+        HOTSPOT <br>
+
+        You are developing an airline reservation website by using HTML5 and JavaScript. A page on the site allows users
+        to enter departure and destination airport information and search for tickets.
+        You have the following requirements:
+
+        Users must be able to save information in the application about their favorite destination airport.
+        The airport information must be displayed in the destination text box whenever the user returns to the page.
+
+        You need to develop the site to meet the requirements.
+
+        Which lines of code should you use? (To answer, select the appropriate options from the drop-down lists in the
+        answer
+        area.)
+        <br>
+        Hot Area:
+    </p>
+    <xmp>
+
+        <body>
+            <input id="txtDest" type="text" />
+            <input type="button" value="Submit" onclick="storeDestination('txtDests');" />
+            <script>
+                showDestination();
+                function showDestination() {
+
+                    var dest = localStorage.destination;
+                    /*localStorage.destination = dest; **** NO
+                    var dest = sessionStorage.destination; **** NO
+                    sessionStorage.destination = dest; *** NO*/
+
+                    if (dest != null)
+                        document.getElementById("txtDest").value = dest;
+                }
+
+
+                function storeDestination(id) {
+                    var dest = document.getElementById(id).value;
+
+                    //var dest = localStorage.destination;
+                    localStorage.destination = dest;
+                    /*var dest = sessionStorage.destination;
+                    sessionStorage.destination = dest;*/
+                }
+            </script>
+        </body>
+    </xmp>
+
+
+    Answer
+
+    <xmp>
+
+        <body>
+            <input id="txtDest" type="text" I>
+            <input type="button" value="Submitm onclick=" storeDestination('txtDest')">
+            <script>
+                showDestination();
+                function showDestination() {
+
+                    var dest = localStorage.destination;
+
+                    if (dest != null)
+                        document.getElementById("txtDest").value = dest;
+                }
+
+
+                function storeDestination(id) {
+                    var dest = document.getElementById(id).value;
+
+                    localStoragedestination = dest;
+                }
+            </script>
+        </body>
+    </xmp>
+    <p>
+        Section: Module 9 - Adding Offline Support to Web Applications
+        Explanation
+        Explanation/Reference:
+        Explanation:
+        * retrieve localStorage.destination
+        * store localStorage.destination
+    </p>
+    <br>
+    <input id="txtDest" type="text" I>
+    <input type="button" value="Submit" onclick="storeDestination('txtDest')">
+    <script>
+        showDestination();
+        function showDestination() {
+
+            var dest = localStorage.destination;
+            if (dest != null)
+                document.getElementById("txtDest").value = dest;
+        }
+
+
+        function storeDestination(id) {
+            var dest = document.getElementById(id).value;
+            localStorage.destination = dest;
+        }
+    </script>
+
+</body>
+
+</html>

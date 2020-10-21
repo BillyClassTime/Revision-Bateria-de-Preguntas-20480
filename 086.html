@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q086</title>
+    <style typemmtext/css">
+        #grid1 {
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: 100px 250px 100px 250px 100px;
+            grid-template-rows: auto;
+            display: -ms-grid;
+            -ms-grid-columns: 100px 250px 100px 250px 100px;
+            -ms-grid-rows: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <xmp>
+        QUESTION 86
+
+        You develop a webpage.
+
+        The webpage must display a grid that contains one row and five columns. Columns one, three, and five are the
+        same width.
+        Columns two and four are the same width, but much wider than columns one, three, and five. The grid resembles
+        the following image:
+
+        _______________________________________
+        l l l l l l
+        _______________________________________
+
+        The grid must meet the following requirements:
+        Each row must be tall enough to ensure that images are not cut off.
+        Each row must contain five columns.
+        The width of the columns must not change when the screen is resized or rotated.
+
+        You need to define the style for the grid. Which CSS3 style should you use?
+
+        A <style type="text/css">
+            #grid {
+                display: -ms-grid;
+                /* -ms-grid-columns': 2fr (3fr 2fr)[23];*/
+                -ms-grid-rows: auto;
+            }
+        </style>
+
+        B. <style type"text/css">
+            #grid {
+                display: -ms-grid;
+                /* -ms-grid-columns: 100px (250px 100px)[2];*/
+                -ms-grid-rows: min-content;
+            }
+        </style>
+
+        C. <style typemmtext/css">
+            #grid {
+                display: -ms-grid;
+                -ms-grid-columns: 100px 250px 100px 250px 100px;
+                -ms-grid-rows: auto;
+            }
+        </style>
+
+        D. <style type"text/css">
+            #grid {
+                display: -ms-grid;
+                -ms-grid-columns: 100px 250px 100px 250px 100px;
+                -ms-grid-rows: min-content;
+            }
+        </style>
+
+
+        Correct Answer: C
+
+        Section: Volume B
+        Explanation
+        Explanation/Reference:
+        * -ms-grid-rows property
+        auto
+        The height of a row is computed based on the tallest child element in that column.
+        Incorrect Answers:
+        A: The width of the columns must not change when the screen is resized or rotated.
+        B, D: -ms-grid-rows property
+        min-content
+        The minimum height of any child elements is used as the height of the row.
+        Note:
+        * width The width of each column specified as one of the following values:
+        A length consisting of an integer number, followed by an absolute units designator ("cm", "mm", "in", "pt", or
+        "pc") or a relative units designator ("em", "ex", or "px").
+        A percentage of the object width.
+        A proportion of the remaining horizontal space (that is, the object width, less the combined widths of other
+        tracks),consisting of an integer number followed by a fractional designator ("fr"). For example, if "200px 1fr
+        2fr" is
+        specified, the first column is allocated 200 pixels, and the second and third columns are allocated 1/3 and 2/3
+        of the remaining
+        width, respectively.
+
+        Demostración: Estan ambos -ms-grid y grid, -ms-grid-columns y grid-template-columns, y grid-template-rows, -ms-grid-rows
+        <style typemmtext/css">
+            #grid1 {
+                background-color: aqua;
+                display: grid;
+                grid-template-columns: 100px 250px 100px 250px 100px;
+                grid-template-rows: auto;
+                display: -ms-grid;
+                -ms-grid-columns: 100px 250px 100px 250px 100px;
+                -ms-grid-rows: auto;
+            }
+        </style>
+        <div id="grid1">
+            <div>1.</div>
+            <div>2.</div>
+            <div>3.</div>
+            <div>4.</div>
+            <div>5.</div>
+        </div>
+
+
+    </xmp>
+    <div id="grid1">
+        <div>1.</div>
+        <div>2.</div>
+        <div>3.</div>
+        <div>4.</div>
+        <div>5.</div>
+    </div>
+</body>
+
+</html>

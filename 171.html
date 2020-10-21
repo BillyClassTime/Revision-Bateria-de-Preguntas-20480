@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q171</title>
+    <style>
+        body {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>QUESTION 171</h3>
+    You are developing a web page that includes the following HTML.
+    <xmp>
+        <span id="myTextSpan" class="myStyle">Hello, World!</Span>
+    </xmp>
+    You need to use inline CSS styling to format the text with Arial font.
+
+    Which code segment should you use?
+    <xmp>
+        A <style>
+            .myStyle {
+                font-style: Arial;
+            }
+        </style>
+
+        B. <span id="myTextSpan" class="myStyle" style="font-family: Arial">Hello, World!</span>
+
+        C. <span id="myTextSpan" class="myStyle" style="font-style: Arial">Hello, World!</span>
+
+        D. <style>
+            .myStyle {
+                font-family: Arial;
+            }
+        </style>
+
+    </xmp>
+    <br>
+    <h4>Correct Answer: B </h4>
+    Section: Volume D <br>
+    Explanation <br>
+    Explanation/Reference: <br>
+    <strong>Explanation:The font-family property specifies the font for an element.</strong>
+    <br>
+    <h4>Incorrect Answers:</h4><strong>
+    A, D: This is not inline CSS. <br>
+    C: With font style we define style only: <br>
+    Syntax: font-style: normal|italic|oblique|initial|inherit; <br></strong>
+    Reference: https://www.w3schools.com/CSSref/pr_font_font-family.asp
+<br>
+    <h3>Comprobacion</h3><br>
+    <span id="myTextSpan" class="myStyle" style="font-family: Arial">Hello, World!</Span>
+
+</body>
+
+</html>

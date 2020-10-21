@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q035</title>
+    <style>
+        div {
+            width: 600px;
+            height: 100px;
+            border-block-color: blue;
+        }
+    </style>
+    <script>
+        function optionA() {
+            var boxclass = document.getElementsByClassName("Box");
+            boxclass[0].style.background = "rgb(255, 0, 0)";
+            boxclass[0].style.backfaceVisibility = "hidden";
+        }
+        function optionB() {
+            var boxclass = document.getElementsByClassName("Box");
+            boxclass[0].style.background = "rgb(255, 0, 0)";
+            boxclass[0].style.background = "rgb(255, 0, 0,0.5)";
+        }
+
+        function optionC() {
+            var boxclass = document.getElementsByClassName("Box");
+            boxclass[0].style.background = "rgb(255, 0, 0)";
+            boxclass[0].style.opacity = "0.5";
+        }
+
+        function optionD() {
+            var boxclass = document.getElementsByClassName("Box");
+            boxclass[0].style.background = "rgb(255, 0, 0)";
+            boxclass[0].style.backgroundColor = "#fff";
+        }
+    </script>
+</head>
+
+<body>
+
+    <xmp>
+        QUESTION 35
+
+        You are styling a box object on a page by using CSS3.
+
+        You need to set the transparency of the object to 50%.
+
+        Which two CSS3 styles will achieve the goal? (Each correct answer presents a complete solution. Choose two.)
+
+        A
+        <style>
+            .Box {
+                background: rgb (255, 0, 0);
+                backface-visibility: hidden; /*Visibilidad de la cara posterio: define si la cara posterior de un elemento debe ser visible cuando se enfrenta a un ususio */
+            }
+        </style>
+
+        B
+        <style>
+            .Box {
+                background: rgb (255, 0, 0);
+                background: rgba (255, 0, 0, .5);
+            }
+        </style>
+
+        C
+        <style>
+            .Box {
+                background: rgb (255, 0, 0);
+                opacity: 0, 5;
+            }
+        </style>
+        D
+        <style>
+            .Box {
+                background: rgb (255, 0, 0);
+                background-color: #fff;
+                /*Background is the Shorthand background-color*/
+            }
+        </style>
+
+        Correct Answer: BC
+        Section: Volume A
+        Explanation
+        Explanation/Reference:
+        Explanation:
+        The RGBA declaration allows you to set opacity (via the Alpha channel) as part of the color value.
+        Example:
+        <style>
+            div {
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+        </style>
+        The background color has been set to blue, and the opacity set to half.
+
+        Example 2:
+        <style>
+            div {
+                background-color: rgb(0, 0, 255);
+                opacity: 0.5;
+            }
+        </style>
+        The background color has been set to blue, and the opacity set to half.
+        Reference: A brief introduction to Opacity and RGBA
+        http://www.css3.info/introduction-opacity-rgba/
+    </xmp>
+    <di>Comprobación</di>
+    <div class="Box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quo explicabo nisi sunt aspernatur
+        at eum, omnis sequi veniam porro architecto deleniti, ratione dolor consequatur facere! At dolores animi
+        consequuntur!</div>
+    <button onclick="optionA()">Option A</button>
+    <button onclick="optionB()">Option B</button>
+    <button onclick="optionC()">Option C</button>
+    <button onclick="optionD()">Option D</button>
+</body>
+
+</html>

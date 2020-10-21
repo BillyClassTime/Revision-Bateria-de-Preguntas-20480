@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q315</title>
+    <style>
+        
+        @media (max-width: 680px), screen, (orientation: portrait) {
+            body {
+                max-width: 500px;
+            }
+        }
+        /*@media (max-resolution: 680px),
+        screen,
+        (orientation: portrait) {
+            body {
+                max-width: 500px;
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <xmp>
+        You are creating a webpage by using HTML5 and CSS3.
+        You need to ensure that the maximum width of the page is set to 500px if any of the following conditions are
+        true:
+
+        - The media type of the device is a screen.
+        - The width of the display is less than 680px.
+        - The orientation of the display is portrait mode.
+
+        Which CSS markup should you use?
+
+        A
+        <style>
+            @media (max-width: 680px),
+            screen,
+            (orientation: portrait) {
+                body {
+                    max-width: 500px;
+                }
+            }
+        </style>
+
+        B
+        <style>
+            @media (max-resolution: 680px),
+            screen,
+            (orientation: portrait) {
+                body {
+                    max-width: 500px;
+                }
+            }
+        </style>
+
+        C
+        <style>
+            viewport[max-width=680px][zoom=1][orientation="portrait"] {
+                max-width: 500px;
+            }
+        </style>
+
+        D
+        <style>
+            viewport[max-width=680px] {
+                max-width: 500px;
+            }
+
+            @media screen {
+                body {
+                    max-width: 500px;
+                }
+            }
+
+            viewport[orientation="portrait"] {
+                max-width: 500px;
+            }
+        </style>
+    </xmp>
+
+    <div>Respuesta:
+        <p>A</p>
+        <p>Explicación: 
+            max-width	The maximum width of the display area, such as a browser window
+        </p>
+        <p>Respuestas incorrectas</p>
+        <p>max-resolution	The maximum resolution of the device, using dpi or dpcm</p>
+        <p>viewport - Deprecated</p>
+    </div>
+</body>
+
+</html>

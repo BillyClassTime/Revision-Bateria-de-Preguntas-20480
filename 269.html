@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 269</title>
+    <style>
+        [href^="ml"]{
+            color: yellow;
+        }
+        [href$="ml"]{
+            color: red;
+        }
+        [class*="nav"] a{
+            background-color: aqua;
+        }
+        [class~="nav"] a{
+            background-color: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 269</h2>
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>DRAG DROP<br /><br />
+                    
+                    You have a page that uses HTML5 and CSS3. The page contains the following markup. <br /> <br />
+
+                    <img src="./img/image428.jpeg" alt="">
+
+                    <br /><br />
+                    What are the font color and the background color of the links when the page renders? To
+                    answer, drag the appropriate colors to the correct locations. Each color may be used once, more than once,
+                    or not at all. You may need to drag the split bar between panes or scroll to view content.<br /><br />
+                    
+                    NOTE: Each correct selection is worth one point.<br /><br />
+                    
+                    Select and Place:<br /><br />
+                    
+                    <img src="./img/image429.jpeg" alt="">
+
+                    <br /><br />
+                    Correct Answer:<br /><br />
+                    
+                    <img src="./img/image430.jpeg" alt="">
+
+                    <br /><br />
+                    Section: Volume D <br /><br />
+                    
+                    Explanation<br /><br />
+
+                    Explanation/Reference:<br /><br />
+                    
+                    Reference:
+                    https://www.w3schools.com/cssref/css_selectors.asp<br /></p><br />
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2><br /><br />
+                Este ejercicio trata de los Combinadores CSS. Un combinador es algo que explica la relación entre los selectores.
+                Un selector de CSS puede contener más de un selector simple. Entre los selectores simples, podemos incluir un combinador.
+                <br />
+                Hay cuatro combinadores diferentes en CSS:<br /><br />
+                selector de descendientes (espacio)
+                selector de hijos (>)
+                selector de hermanos adyacentes (+)
+                selector general de hermanos (~)
+                <ul>
+                    <li>[href^="ml"] - Selecciona los elementos cuyo valor de atributo del href comienza exactamente con la cadena "ml".</li>
+                    <li>[href$="ml"] - Selecciona un elemento cuyo valor de atributo href termina exactamente con la cadena "ml"</li>
+                    <li>[class*="nav"] a - Selecciona todos las clases que contengas la cadena "nav".</li>
+                    <li>[class~="nav"] a - Selecciona todos los elemento cuya clases subyacentes es igual a la etiqueta nav.</li>
+                </ul>
+                <br />
+                <h3 style="color:red">Respuesta:</h3>
+                La descripción visual de la respuesta es:<br /><br />
+                    <nav id="mainmenu" class="page-nav">
+                        <div id="navlist" class="container">
+                            <a href="index.html">Home</a>
+                            <a href="register.html">Register</a>
+                        </div>
+                    </nav>
+                <br />
+                    Por lo anterior mencionado en la explicación en la primera caja va el color rojo. Ya que con [href$="ml"] estamos dando 
+                    a entender que buscamos la cadena "ml" al final del atributo href y ambos links terminan con html que el final es ml.
+                    La primera opción no es válida ya que un link comienza con "index" y el otro con "register" que no contiene "ml". POr lo 
+                    tanto se el link se mostrará en rojo.<br /><br />
+                    Ahora tenemos que buscar el background que sea color aqua o fuchsia. El primero [class*="nav"] a - no puede ser ya que se 
+                    selecciona todos las clases que contengas la cadena "nav" y no elementos con la etiqueta nav que es diferentes.
+                    Por lo tanto queda [class~="nav"] a que define todas las clases hermanas con la etiqueta nav y ahí el color de fondo del 
+                    link se pintará en este caso fuchsia. Como se muestra en la representación visual.
+                <br /><br />
+                <h3 style="color:red">Fuentes:</h3>
+                https://www.w3schools.com/css/css_combinators.asp
+                <br />
+                https://www.quackit.com/css/selectors/<br />
+            </td>
+        </tr>
+    </table>
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>

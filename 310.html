@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q310</title>
+    <style>
+        div.myclass {
+            /* AÑADIR LINEA DE CODIGO AQUI*/
+            top: 0;
+            background-color: yellow;
+            border: 5px double red;
+            padding: iepx;
+        }
+    </style>
+    <script>
+        var divToChange;
+        window.addEventListener('DOMContentLoaded', (event) => {
+         
+            divToChange = document.getElementsByClassName("myclass");
+            // Poner las funcines aqui             
+        });
+        function OpcionA(){
+            if (divToChange!=undefined)
+                document.getElementsByClassName("myclass")[0].style.position = "sticky"
+        }
+        function OpcionB(){
+            if (divToChange!=undefined)
+                document.getElementsByClassName("myclass")[0].style.position = "fixed";
+        }
+        function OpcionC(){
+            if (divToChange!=undefined)
+                document.getElementsByClassName("myclass")[0].style.position = "absolute";
+        }
+        function OpcionD(){
+            if (divToChange!=undefined)
+                document.getElementsByClassName("myclass")[0].style.position = "relative";
+        }
+        function OpcionE(){
+            if (divToChange!=undefined)
+                document.getElementsByClassName("myclass")[0].style.position = "static";
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div>Prueba</div>
+    <button onclick="OpcionA()">Option A</button>
+    <button onclick="OpcionB()">Option B</button>
+    <button onclick="OpcionC()">Option C</button>
+    <button onclick="OpcionD()">Option D</button>
+    <button onclick="OpcionE()">Option E</button>
+    <div class="myclass">welcome to the Sitel</div>
+    <p>lorem ipsum dolor sit amet,consectetur adipiscing elit.
+        Vivamus voluptat fells elit, at tincidunt magna eleifend eu. Corabitur
+        odio nunc, lobortis a consequat vitae, convallis vel ipsum. Nunc
+        vehicula erat in sollicitudin sollicitudin. suspendisse ullamcorper
+        purus eu massa congue aliquam. Nunc a tellus fermentum, gravida mi at,
+        convallis justo. sed sollicitudin congue odio, nec imperdiet tortor
+        pulvinar ut. Fusce viverra, est ut suscipit finibus, nisi ligula ornare
+        risus, eu ultricies velit ante eu odio. Morbi vehicula suscipit varius.
+        Etiam sit amet lacus gravida, dictum mi id, luctus tellus. Proin
+        fermentum euismod justo sit amet feugiat. Aliquam scelerisque leo sit
+        amet lacus ultrices sagittis. Phasellus et sodales mauris.</p>
+    <xmp>
+        QUESTION 310
+
+        You have the following markup. (Line numbers are included for reference only.)
+
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <style>
+                div.myclass {
+                    /* AÑADIR LINEA DE CODIGO AQUI*/
+                    /*top: 0;*/
+                    background-color: yellow;
+                    border: 5px double red;
+                    padding: iepx;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="myclass">welcome to the Sitel</div>
+            <p>lorem ipsum dolor sit amet,consectetur adipiscing elit.
+                Vivamus voluptat fells elit, at tincidunt magna eleifend eu. Corabitur
+                odio nunc, lobortis a consequat vitae, convallis vel ipsum. Nunc
+                vehicula erat in sollicitudin sollicitudin. suspendisse ullamcorper
+                purus eu massa congue aliquam. Nunc a tellus fermentum, gravida mi at,
+                convallis justo. sed sollicitudin congue odio, nec imperdiet tortor
+                pulvinar ut. Fusce viverra, est ut suscipit finibus, nisi ligula ornare
+                risus, eu ultricies velit ante eu odio. Morbi vehicula suscipit varius.
+                Etiam sit amet lacus gravida, dictum mi id, luctus tellus. Proin
+                fermentum euismod justo sit amet feugiat. Aliquam scelerisque leo sit
+                amet lacus ultrices sagittis. Phasellus et sodales mauris.</p>
+        </body>
+
+        </html>
+
+        You need to ensure that the div element remains visible while scrolling.
+
+        Which two lines of markup can add at line 06 to achieve the goal? Each correct answer presents a complete
+        solution.
+
+        NOTE: Each correct selection is worth one point.
+
+        A. position: sticky;
+        B. position: fixed;
+        C. position: absolute;
+        D. position: relative;
+        E. position: static;
+
+        Correct Answer: AB
+
+        Section: Volume D
+        Explanation
+
+        Explanation/Reference:
+        References:
+        https://www.w3schools.com/cssref/pr_class_position.asp
+    </xmp>
+
+</body>
+
+</html>

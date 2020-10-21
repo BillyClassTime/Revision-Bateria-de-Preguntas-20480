@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q222</title>
+    <script>
+        var x = "";
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+            x = document.getElementById("demo");
+            // Poner las funcines aqui             
+        });
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>QUESTION 222</h3>
+
+    <p>You are developing a website that helps users locate restaurants in their area from a browser. You create a
+        function named</p> <strong>findRestaurants().</strong>
+    <br>
+    <h4>The function must:</h4>
+    <ol>
+        <li>Get the current latitude and longitude of the user's device </li>
+        <li>Pass the user's location to <strong> findRestaurants()</strong></li>
+    </ol>
+    You must ensure that the application accesses the geolocation information from the user's device before
+    searching for restaurants. <br>
+
+    <p>Which code segment should you use?</p>
+
+    <p>A.</p>
+    <xmp>
+        navigator.geolocation.getCurrentPosition(GetRestaurants);
+        function GetRestaurants() {
+            restaurants = findRestaurants(navigator.geolocation.getCurrentPosition());
+            //...
+        }
+    </xmp>
+    <p>B.</p>
+    <xmp>
+        navigator.geolocation.getCurrentPosition(hasPosition, noPosition);
+        function hasPosition(position) {
+            restaurants = findRestauntnts(position.coords.latitude, position.coords.longitude);
+            //... 
+        }
+        function noPosition() {
+            //...
+        }
+    </xmp>
+
+    <p>C.</p>
+    <xmp>
+        navigator.geolocation.getCurrentPosition(GetRestaurants);
+        function GetRestaurants() {
+            restaurants = findRestaurants(navigator.geolocation.getLatitude(),
+                navigator.geolocation.getLongitude());
+            //...
+        }     
+    </xmp>
+    <p> D.</p>
+    <xmp>
+        navigator.geolocation.getBrowserPosition(hasPosition);
+        function hasPosistion(position) {
+            restaurants = findRestaurants(position.coords.latitude, position.coordsiongitude);
+            //...
+        }
+    </xmp>
+    <br>
+    <h3>Correct Answer: B</h3>
+    Explanation: <br>
+    The getCurrentPosition method retrieves the current geographic location of the device.<br>
+    The location is expressed as a set of geographic coordinates together with information about heading and speed. The
+    location information is returned
+    in a Position object. <br>
+    syntax of this method:
+    getCurrentPosition(showLocation, ErrorHandler, options);<br>
+    where <br>
+    showLocation : This specifies the callback method that retrieves the location information. This method is called
+    asynchronously with an object corresponding to the Position object which stores the returned location
+    information. <br>
+    ErrorHandler : Thisoptional parameter specifies the callback method that is invoked when an error occurs in
+    processing the asynchronous call. This method is called with the PositionError object that stores the returned error
+    information. <br>
+    The example below is a simple Geolocation example returning the latitude and longitude of the user's position:
+    <br>
+    Example
+    <xmp>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+    </xmp>
+    Example explained:<br>
+    Check if Geolocation is supported <br>
+    If supported, run the getCurrentPosition() method. If not, display a message to the user
+    If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in
+    the parameter (showPosition) <br>
+    The showPosition() function gets the displays the Latitude and Longitude <br>
+
+    The example above is a very basic Geolocation script, with no error handling.
+    Reference:
+    <a href="https://www.w3schools.com/html/html5_geolocation.asp">w3schools geolocalización</a><br>
+    <a href="https://w3c.github.io/geolocation-api/">w3C</a><br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition">Developer Mozilla
+        Geolocalizacion</a>
+
+    <br>
+    comprobación <br>
+    <div id="demo"></div>
+    <br>
+    <button onclick="getLocation()">Answer B</button>
+</body>
+
+</html>

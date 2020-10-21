@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 167</title>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 167</h2>
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You develop an HTML5 application that interacts with a REST service. The REST service accepts JSON
+                    data. A JavaScript object named form Data contains data that is sent to the REST service.<br /><br />
+
+                    You need to convert the JavaScript object named formData into JSON. Which code segment should you use?<br /><br />
+
+                    A. jQuery.ajax.valueOf(formData);<br />
+                    B. window.evai(formData);<br />
+                    C. JSON.stringify(formData);<br />
+                    D. formData.toString();<br /><br />
+
+
+                    Correct Answer: C<br /><br />
+
+                    Section: Volume D<br /><br />
+
+                    Explanation<br /><br />
+
+                    Explanation/Reference:<br /><br />
+
+                    Explanation:<br /><br />
+
+                    JSON.stringify converts a JavaScript<br /> value to a JavaScript Object Notation (JSON)
+                    string.<br /><br />
+
+                    References:<br /><br />
+                    https://www.w3schools.com/js/js_json_stringify.asp<br />
+                    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify<br />
+                </p>
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                Un uso común de JSON es intercambiar datos hacia/desde un servidor web. Al enviar datos a un servidor web, 
+                los datos deben ser una cadena. <br /><br />
+
+                Digamos que queremos convertir un objeto JavaScript a JSON.<br /><br />
+                
+                Imaginemos que tenemos este objeto en JavaScript:<br /><br />
+                var obj = {nombre: "John", edad: 30, ciudad: "Nueva York"};
+                <br /><br />
+                Utilizamos la función de JavaScript JSON.stringify() para convertir el objeto JSON en una cadena:<br /><br />
+                
+                var myJSON = JSON.stringify (obj);<br /><br />
+                
+                El resultado será una cadena siguiendo la notación JSON:<br /><br />
+                
+                myJSON ahora es una cadena y está listo para enviarse a un servidor:<br /><br />
+                {"name":"John","age":30,"city":"New York"}
+                <br /><br />
+                <h3 style="color:red">Respuesta:</h3>
+                jQuery.ajax( url [, settings ] )
+                <ul>
+                    <li>La Opción A: Realiza una solicitud HTTP (Ajax) asincrónica con la estructura del método jQuery.ajax(url [, settings]).
+                        Por lo que la descripción del método no es la correctao 
+                    </li>
+                    <li>
+                        La Opción B: window.evai(formData) es una sintaxis incorrecta del método para windows y en realidad no representa nada.
+                    </li>
+                    <li>Por lo anterior explicado en la parte anterior la respuesta es la opción C.</li>
+                    <li>
+                        La Opción D: formData.toString(); el metódo "toString()" convierte a cadena un objeto de tipo string. En esta caso formData
+                        no representa ningún objeto ya que son los datos del formulario. Primero habría que crear el objeto, pero este objeto tiene 
+                        la representación clave:valor algo que no es para objetos string, si no más bien para objetos JavaScript o JSON.
+                    </li>
+                </ul><br />
+                <h3 style="color:red">Fuentes:</h3><br />
+                Las mismas dada en la respuesta y estas:<br /><br />
+                https://api.jquery.com/jquery.ajax/
+                
+                <br /><br />
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

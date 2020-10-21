@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q154</title>
+    <style>
+        input:disabled {
+            background-color: #e0e0e0;
+        }
+    </style>
+    <script type="text/javascript">
+        function enable(e) {
+            //alert(e.id);
+            //alert(e.name);
+            document.getElementById('eMail').disabled = e.checked ? false : true;
+            /*if (document.getElementById) {
+                if (document.getElementById('choc').checked) {
+                    document.getElementById('eMail').disabled = false;
+                } else
+                    document.getElementById('eMail').disabled = true;
+            }*/
+        }
+    </script>
+</head>
+
+<body>
+    <h3>QUESTION 154</h3>
+    <p>
+        DRAG DROP</p><br>
+    <p>You are developing a web page that includes the following HTML.</p>
+
+    <xmp>
+        <input name="ITSupport" type="checkbox" value="It" id="choc" oncllck="enable();" />
+        <label for="IT">IT Support</label>
+        <input type="email" placeholder="IT@Contoso.com" id="eMail" name="eMail" disabled />
+        <label for="eMail">Your eMail </label>
+    </xmp>
+    <p>
+        You need to ensure that the email element is enabled only if the user selects the IT Support check box.
+        Which CSS selectors should you use? (To answer, drag the appropriate selector to the correct location.
+        Each selector may be used once, more than once, or not at all. You may need to drag the split bar
+        between panes or scroll to view content.)
+    </p>
+    <br>
+    <p>
+        Select and place
+    </p><br>
+    <p>
+        CSS selectors
+        enable
+        disabled
+        hidden
+        true
+        false
+        set
+
+        Answer area
+    </p>
+    <xmp>
+        <style>
+            input:disabled {
+                background-color: #e0e0e0;
+            }
+        </style>
+        <script type="text/javascript">
+            function enables(e) {
+                if (document.getElementById) {
+                    if (document.getElementById('It').checked) {
+                        document.getElementById('eMail').disabled = false;
+                    } else
+                        document.getElementById('eMail').disabled = true;
+                }
+            }
+        </script>
+    </xmp>
+    <p>
+        Section: Volume D<br>
+        Explanation<br>
+        Explanation/Reference:<br><br>
+        Explanation:<br>
+    <p>
+        The disabled property sets or returns whether an email field should be disabled, or not. A disabled element is
+        unusable and un-clickable. Disabled elements are usually rendered in gray by default in browsers.
+    </p><br>
+    <p>
+        Example<br>
+        Disable an email field:<br>
+        document.getElementById("myEmail").disabled = true;<br>
+        Reference: https://www.w3schools.com/jsref/prop_email_disabled.asp<br>
+
+        Demostración:
+    </p>
+    <input name="ITSupport" type="checkbox" value="It" id="choc" onclick="enable(this);" />
+    <label for="IT">IT Support</label>
+    <input type="email" placeholder="IT@Contoso.com" id="eMail" name="eMail" disabled />
+    <label for="eMail">Your eMail </label>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 276</title>
+    <style>
+        .flex1{
+            background-color: yellow;
+            border:dotted;
+        }
+        .flex2{
+            background-color: red;
+            border:dotted;
+        }
+    </style>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 276</h2>
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You have the following markup.<br /> <br /> <br />
+
+                    <img src="./img/image448.jpeg" alt="">
+
+                    <br /><br />
+                    You need to ensure that flex1 is displayed on the right of the page.
+                    flex2 must be displayed directly to the left of flex1.<br /><br />
+
+                    Which style should you add to the outer div?<br /><br />
+
+                    <img src="./img/image449.jpeg" alt="">
+                    <br /><br />
+
+                    A. Option A<br />
+                    B. Option B<br />
+                    C. Option C<br />
+                    D. Option D<br /><br />
+
+                    Correct Answer: B<br /><br />
+
+                    Section: Volume D <br /><br />
+
+
+                    Explanation<br /><br />
+
+                    Explanation/Reference:<br /><br />
+
+                    Reference:
+                    https://www.w3schools.com/cssref/css3_pr_flex-direction.asp<br /><br />
+                </p>
+
+                <hr>
+                <h2 style="color:red">Explicación</h2><br />
+                El ejercicio requiere que nosotros invertamos la forma en que se muestran los div. Sin aplicar el estilo
+                los divs se muestran como sigue a continuación:<br /><br />
+                <div style="display:flex; background-color: grey;">
+                    <div class="flex1">
+                        Flex1
+                    </div>
+                    <div class="flex2">
+                        Flex2
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    La idea es que el div rojo aparezca primero que el div amarrillo. Para ello debemos agregar el
+                    estilo apropiado al div externo.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3 style="color:red">Respuesta:</h3><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Opción A, usando el estilo: flex-direction:column-reverse; Como se observa
+                los div se situan uno sobre el otro y no es lo que se quiere.<br /><br />
+                <div style="display:flex; flex-direction:column-reverse; background-color: grey;">
+                    <div class="flex1">
+                        Flex1
+                    </div>
+                    <div class="flex2">
+                        Flex2
+                    </div>
+                </div>
+                <br /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                La respuesta correcta es la opción B: flex-direction:row-reverse; Que nos ayuda a invertir el orden de los div <br /><br />
+                <div style="display:flex; flex-direction:row-reverse; background-color: grey;">
+                    <div class="flex1">
+                        Flex1
+                    </div>
+                    <div class="flex2">
+                        Flex2
+                    </div>
+                </div>
+                <br /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Opción C, usando el estilo: flex-direction:row; Aquí se mantiene lo mismo que fue dado
+                inicialmente y no cumplimos con lo requerido. <br /><br />
+                <div style="display:flex; flex-direction:row; background-color: grey;">
+                    <div class="flex1">
+                        Flex1
+                    </div>
+                    <div class="flex2">
+                        Flex2
+                    </div>
+                </div>
+                <br /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Opción D, usando el estilo: flex-direction:column. Aquí invertimos el orden de las columnas 
+                pero no cumple con lo querido. <br /><br />
+                <div style="display:flex; flex-direction:column; background-color: grey;">
+                    <div class="flex1">
+                        Flex1
+                    </div>
+                    <div class="flex2">
+                        Flex2
+                    </div>
+                </div>
+                <br /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br /><br />
+                <h3 style="color:red">Fuentes:</h3><br /><br />
+                https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <script>
+
+    </script>
+    <br />
+</body>
+
+
+</html>

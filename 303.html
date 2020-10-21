@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Q303</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>You have the following HTML markup</p>
+    <xmp>
+        <ul class="list1">
+            <li>
+                <a href="http://contoso.com">Contoso</a>
+                <ul id="list1">
+                    <li><a href="/ShowLocation.aspx">Address</a></li>
+                    <li><a href="/Products.aspx">Products</a></li>
+                </ul>
+            </li>
+        </ul>
+    </xmp>
+    <p>You need to write a scrip that will turn the text "Contoso" green</p>
+    <p>You write the following code</p>
+    <xmp>
+        $(document).ready(function () {
+            $('Target1 Target2 Target3>a').Target4 ({
+            "color":"green"
+            })
+        });
+    </xmp>
+    <p>How should you complete the code? To answer, drag the appropriate code elements to the correct targets. Each code
+        element may be used once, more than once, or not at all. You may need to drag the split bar between panes or
+        scroll to view content.</p>
+    <xmp>
+        OPTION TO SELECTING (Drag and Drop) Target1. Target2, ...:
+            +
+        (2) >
+            addClass
+            append
+        (4) css
+        (3) li
+        (1) .list1
+            ul
+    </xmp>
+
+    <p>Respuesta:</p>
+    <xmp>
+        $(document).ready(function () {
+            $('.list1>li>a').css({
+                "color": "green"
+            });
+        });
+    </xmp>    
+
+    <ul class="list1">
+        <li>
+            <a href="http://contoso.com">Contoso</a>
+            <ul id="list1">
+                <li><a href="/ShowLocation.aspx">Address</a></li>
+                <li><a href="/Products.aspx">Products</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script>
+    $(document).ready(function () {
+        $('.list1>li>a').css({
+            "color": "green"
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 103</title>
+</head>
+
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 103</h2>
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>DRAG DROP<br /><br />
+
+                    You develop an HTML application that calls a Simple Object Access Protocol (SOAP) web
+                    service to retrieve data.<br /><br />
+
+                    You need to load data from the web service.<br /> <br />
+
+                    What should you do? To answer, drag the appropriate code segments to the correct targets.
+                    Each code segment may be used once, more than once, or not at all.
+                    You may need to drag the split bar between panes or scroll to view content.<br /><br />
+
+
+                    NOTE: Each correct selection is worth one point.<br /><br />
+
+                    Select and Place:<br /><br />
+
+                    <img src="./img/image152.jpeg" alt="">
+
+                    <br /> <br />
+                    Correct Answer:<br /> <br />
+                    <img src="./img/image153.jpeg" alt="">
+
+                    <br /> <br />
+                    Section: Volume C<br /><br />
+
+                    Explanation<br /><br />
+
+                    Explanation/Reference:<br /><br />
+
+                    Explanation:<br /><br />
+                    * contentType - contentType is the type of data you're sending.<br />
+                    We have to send the content-type of application/soap+xml as this is the only type
+                    that the web service allow.<br /><br />
+
+                    * type - We post a SOAP request.<br /><br />
+
+                    * dataType: dataType is what you're expecting back from the server: json, html, text, xml, etc. jQuery will use
+                    this to figure out how to populate the success function's parameter.<br /><br />
+                </p>
+                <br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                Este ejercicio tiene relación con el método $.ajax():<br /><br />
+                jQuery proporciona este método para realizar peticiones Ajax al servidor, 
+                la diferencia es que este método se puede utilizar para peticiones get o post, 
+                y para elegir entre muchas opciones diferentes que vamos a explicar a continuación.<br /><br />
+                Digamos tenemos el siguiente objeto:<br /><br />
+                var configuracion = { 
+                    nombre: "Triángulo",
+                    tamañoLado: 20,
+                    color: "azul"
+                };
+                <br /><br />
+                El método  $.ajax()  cuenta con dos sintaxis posibles:
+                <br /><br />
+                $.ajax(url, { objeto-configurable } );<br />
+                // o<br />
+                $.ajax( { objeto-configurable } );
+                <br /><br />
+                En la primera sintaxis, se especifica la url a la que enviar la petición Ajax, 
+                y luego se pasa el objeto configurable, y en la segunda, se pasa directamente el objeto, 
+                que también contendrá la dirección url de la petición.
+                <br /><br />
+                El objeto configurable contendrá uno o varios de los parámetros siguientes:
+                <br />
+                <ul>
+                    <li>
+                        type : tipo de la petición, GET o POST (GET por defecto). 
+                    </li>
+                    <li>
+                        url : dirección a la que se envía la petición.
+                    </li>
+                    <li>
+                        data : datos a enviar al servidor.
+                    </li>
+                    <li>
+                        dataType : tipo de datos que esperas obtener del servidor (si no se especifica, jQuery intenta averiguar de qué tipo se trata).
+                    </li>
+                    <li>
+                        success : función que se ejecuta cuando se obtiene una respuesta con éxito.
+                    </li>
+                    <li>
+                        error : función que se llama si la petición no tiene éxito.
+                    </li>
+                </ul>
+                <br />
+                Según nuestro ejercicio tenemos que rellenar tres campos:<br />
+                <ul>
+                    <li>ContentType</li>
+                    <li>type</li>
+                    <li>dataType</li>
+                </ul>
+                <h3 style="color:red">Respuesta:</h3>
+                <ul>
+                    <li>
+                        ContentType: Según las condiciones del ejercicio tenemos una aplicación 
+                        que llama a un servicio SOAP para obtener datos. El tipo del contenido por 
+                        lógica tienen que ser "application/soap+xml"
+                    </li>
+                    <li>
+                        type: con lo descrito anteriormente esto debe ser get o post. Como enviamos uan petición al servidor el método 
+                        más seguro es el POST. Además si no definimos este parámetro el método por defecto es GET.
+                    </li>
+                    <li>dataType: como se van a enviar datos SOAP, por definición SOAP (originalmente las siglas de Simple Object Access Protocol) es un 
+                        protocolo estándar que define cómo dos objetos en diferentes procesos pueden comunicarse por medio de intercambio de datos XML.
+                        Es decir los datos son XML.
+                    </li>
+                </ul>
+                <br />
+                <h3 style="color:red">Fuentes:</h3>
+                https://openclassrooms.com/en/courses/4309491-simplifica-tus-proyectos-con-jquery/4981961-el-metodo-ajax<br />
+                https://es.wikipedia.org/wiki/Simple_Object_Access_Protocol<br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <br /><br />
+    <script>
+
+    </script>
+</body>
+</html>

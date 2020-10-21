@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q235</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           //document("footer") = "All rights reserved";
+           //document("footer").innerHTML = "All rights reserved";
+           //$(".footer").value = "All rights reserved";
+           //$("#footer").html("All rights reserved");
+           //document.getElementById("footer") = "All rights reserved";
+        });
+        function optionA(){
+            try {
+                document("footer") = "All rights reserved";
+            } catch (e) {
+                alert(e.message)
+            }
+        }
+        function optionB(){
+            try {
+                document("footer").innerHTML = "All rights reserved";
+            } catch (e) {
+                alert(e.message)
+            }
+        }
+        function optionC(){
+            try {
+                $(".footer").value = "All rights reserved";
+            } catch (e) {
+                alert(e.message)
+            }
+        }
+        function optionD(){
+            try {
+                $("#footer").html("All rights reserved");
+            } catch (e) {
+                alert(e.message)
+            }
+        }
+        function optionE(){
+            try {
+                document.getElementById("footer") = "All rights reserved";
+            } catch (e) {
+                alert(e.message)
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h2>QUESTION 235</h2>
+
+    You are developing a web application in HTML. <br>
+    You have the following HTML code.<br>
+
+    <xmp>
+        <div id="footer"></div>
+    </xmp>
+    <br>
+    You need to ensure that the div footer contains the text "All rights reserved°. Which line of code should
+    you use?
+    <br>
+    A. document("footer")= "All tights reserved"; <br>
+    B. document("footer").innerHTML = "All rights reserved"; <br>
+    C. $(".footer").value = "All rights reserved"; <br>
+    D. $("#footer").html('All rights reserved"); <br>
+    E. document.getElementById("footer") = "All rights reserved"; <br>
+    <h3> Correct Answer: B ERRATA correcta es D</h3> 
+    References: <br>
+    https://www.codecademy.com/forum_questions/557ea03cd3292f72d10006bf
+    <br>
+    <div id="footer">AQUI EL (C)</div> <br>
+    <button onclick="optionA()">Opción A</button>
+    <button onclick="optionB()">Opción B</button>
+    <button onclick="optionC()">Opción C</button>
+    <button onclick="optionD()">Opción D</button>
+    <button onclick="optionE()">Opción E</button>
+</body>
+
+</html>

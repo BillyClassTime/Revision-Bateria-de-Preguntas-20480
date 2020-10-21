@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 273</title>
+    <style>
+        #element1{
+            background: red;
+            margin: 50px;
+            padding: 50px;
+            width: 200px;
+            height: 150px;
+            box-sizing: border-box;
+        }
+        #element2{
+            background: red;
+            margin: 50px;
+            padding: 50px;
+            width: 400px;
+            height: 350px;
+            box-sizing: border-box;
+        }
+        #element3{
+            background: red;
+            margin: 50px;
+            padding: 50px;
+            width: 100px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+        #element4{
+            background: red;
+            margin: 50px;
+            padding: 50px;
+            width: 300px;
+            height: 250px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 273</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You have the following CSS markup that renders a red rectangle on a webpage.<br /> <br />
+
+
+                    <img src="./img/image440.jpeg" alt="">
+
+                    <br />
+                    How large will the red rectangle appear when it renders on the page?<br /><br />
+                    A. width 200px, height 150 px<br />
+                    B. width 400px, height 350 px<br />
+                    C. width 100px, height 50 px<br />
+                    D. width 300px, height 250 px<br /><br />
+
+
+                    Correct Answer: A <br /><br />
+
+                    Section: Volume D <br /><br />
+
+                    Explanation<br /><br />
+
+                    Explanation/Reference:<br /><br />
+
+                    References:
+                    https://www.w3schools.com/CSSref/css3_pr_box-sizing.asp<br /><br />
+                </p>
+
+
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                1. Cuando aplicamos box-sizing: border-box: El ancho y el alto se aplican a todas las partes del elemento: contenido, relleno y bordes:
+                Aquí, en nuestro ejercicio el ancho completo es de 200px, ¡pase lo que pase!<br /><br />
+                2. Si usamos (que no es el caso) box-sizing: content-box (default): El ancho y la altura solo se aplican al contenido del elemento:
+                Si aplicamos esta propiedad entonces el div tiene un ancho de 200px. Pero el ancho completo es 200px + 100px (margin izquierdo y derecho) + 100px (padding izquierdo y derecho) = 400px!
+                <br />
+
+                <br /><br />
+                <h3 style="color:red">Respuesta:</h3><br />
+                <ul style="list-style: none;">
+                    <li>Opción A: usando width 200px, height 150 px<br /><div id="element1"></div></li><br /><br />
+                    <li>Opción B: usando width 400px, height 350 px<br /><div id="element2"></div></li><br /><br />
+                    <li>Opción C: usando width 100px, height 50 px<br /><div id="element3"></div></li><br /><br />
+                    <li>Opción D: usando width 300px, height 250 px<br /><div id="element4"></div></li><br /><br />
+                </ul>
+
+
+                <br /><br />
+                <h3 style="color:red">Fuentes:</h3>
+                https://www.w3schools.com/CSSref/css3_pr_box-sizing.asp
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <script>
+
+    </script>
+    <br />
+</body>
+
+</html>

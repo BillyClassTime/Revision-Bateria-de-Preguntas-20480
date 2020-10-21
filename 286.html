@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 286</title>
+</head>
+
+<body onload="readXMLFile()">
+    <h2 style='text-align:center;'>Ejercicio No 286</h2><br />
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>DRAG DROP<br /><br />
+
+                    You have a webpage that includes the following markup:<br /> <br /> 
+                    
+                    <img src="./img/image477.jpeg" alt="">
+                    
+                    <br /><br />
+                    An XML file named message.xml resides on a web server. The structure of the file is as
+                    follows:<br /><br />
+
+                    <img src="./img/image478.jpeg" alt="">
+
+                    <br /><br />
+                    You are developing a code-based solution to parse the contents of the XML file and display the
+                    information on the page.<br />
+
+                    The solution must work on both modern and older browsers.<br />
+                    You need to display the information from the XML file onto the page.<br />
+                    In which order should you arrange the code blocks to develop the solution? To answer, move
+                    all code blocks from the list of code blocks to the answer area arrange them in the correct
+                    order.<br /><br />
+
+                    NOTE: Each correct selection is worth one point.<br /><br />
+
+                    Select and Place:<br /> <br />
+
+                    <img src="./img/image479.jpeg" alt="">
+
+                    Correct Answer:<br /> <br />
+
+                    <img src="./img/image480.jpeg" alt="">
+
+                    Section: Volume D<br /><br />
+
+
+                    Explanation<br /><br />
+
+
+                    Explanation/Reference:<br />
+                </p>
+
+
+
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2><br />
+                Para poder hacer el ejercicio práctico hay primero crear un archivo xml al lado del servidor. Este archivo xml
+                contiene la información que se va a enviar del servidor al cliente. El archivo creado se llama "xmlfile.xml". <br />
+                El ejercicio se hace en el visual code usando el servidor del plugin "live server" así podemos simular el servidor remoto. <br />
+                <ul style="line-height: none;">
+                    <li>1. Crear el objeto xmlhttp que es que se encarga de todos los procesos</li>
+                    <li>2. Abrir la conexión con el servidor usando el objeto: xmlhttp.open("GET", "xmlfile.xml", false)</li>
+                    <li>3. Enviar la petición al servidor: xmlhttp.send()</li>
+                    <li>4. Crear el xmlDoc atraves del cual se obtiene las ramas e información del documento xmlfile por medio del códig
+                           xmlDoc = xmlhttp.responseXML;
+                    </li>
+                    <li>5. Utilizar xmlDoc para obtener la información del xmlfile y pasar (pintarla) en el documento hmtl por medio 
+                           del código:<br>
+                           document.getElementById('to').innerHTML = xmlDoc.getElementsByTagName('to')[0].childNodes[0].nodeValue;
+                    </li>
+                </ul>
+                 <xmp>
+                    <script>
+                        function readXMLFile(){
+                            if(window.XMLHttpRequest){
+                                xmlhttp = new XMLHttpRequest();
+                            }
+                            else{
+                                 xmlhttp = new ActiveXObject('Microsoft.xmlhttp');
+                            }
+                            xmlhttp.open("GET", "./xmlfile.xml", false);
+                            xmlhttp.send();
+                            xmlDoc = xmlhttp.responseXML;
+                            document.getElementById('to').innerHTML = xmlDoc.getElementsByTagName('to')[0].childNodes[0].nodeValue;
+                            document.getElementById('from').innerHTML = xmlDoc.getElementsByTagName('from')[0].childNodes[0].nodeValue;
+                            document.getElementById('message').innerHTML = xmlDoc.getElementsByTagName('message')[0].childNodes[0].nodeValue;
+                        }
+                    </script>
+                 </xmp>
+                <h3 style="color:red">Respuesta:</h3>
+                Aquí abajo se muestra la información que ha sido traida desde el servidor:<br />
+                <ul style="list-style: none;">
+                    <li><div id="to"></div></li>
+                    <li><div id="from"></div></li>
+                    <li><div id="message"></div></li>
+                </ul>
+                <br />
+                <h3 style="color:red">Fuentes:</h3>
+                https://www.w3schools.com/xml/dom_httprequest.asp <br />
+                https://xhr.spec.whatwg.org/ <br /><br />
+            </td>
+        </tr>
+    </table>
+    <script>
+        function readXMLFile(){
+            if(window.XMLHttpRequest){
+                xmlhttp = new XMLHttpRequest();
+            }
+            else{
+                 xmlhttp = new ActiveXObject('Microsoft.xmlhttp');
+            }
+            xmlhttp.open("GET", "./xmlfile.xml", false);
+            xmlhttp.send();
+            xmlDoc = xmlhttp.responseXML;
+            //var x = xmlDoc.getElementsByTagName('to')[0];
+            //var y = x.childNodes[0];
+            //document.getElementById("to").innerHTML =
+            //y.nodeValue; 
+
+            document.getElementById('to').innerHTML = xmlDoc.getElementsByTagName('to')[0].childNodes[0].nodeValue;
+            document.getElementById('from').innerHTML = xmlDoc.getElementsByTagName('from')[0].childNodes[0].nodeValue;
+            document.getElementById('message').innerHTML = xmlDoc.getElementsByTagName('message')[0].childNodes[0].nodeValue;
+        }
+    </script>
+</body>
+
+</html>

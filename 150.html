@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q150</title>
+    <style>
+        body {
+            font-size: large;
+        }
+
+        .newspaperA {
+            width: 100px;            
+            column-fill: balance;
+        }
+        .newspaperB {
+            width: 100px;
+            column-gap: 10pxr;
+        }
+        .newspaperC {
+            column-width: 100px;
+        }
+        .newspaperD {
+            width: 100px;
+            columns: 100px 3;
+        }
+
+    </style>
+    <script>
+        function optionA() {
+            var pColum = document.getElementById("newspaper1");
+            pColum.className = 'newspaperA';
+            //pColum.style.width = "100px";
+            //pColum.style.columnFill = "balance";
+        }
+        function optionB() {
+            var pColum = document.getElementById("newspaper1");
+            pColum.className = 'newspaperB';
+            //pColum.style.width = "100px";
+            //pColum.style.columnGap = "10pxr";
+        }
+        function optionC() {
+            var pColum = document.getElementById("newspaper1");
+            pColum.className = 'newspaperC';
+            //document.getElementById("newspaper1").style.columWidth = "100px";
+        }
+        function optionD() {
+            var pColum = document.getElementById("newspaper1");
+            pColum.className = 'newspaperD';
+            //document.getElementById("newspaper1").style.width = "100px";
+            //document.getElementById("newspaper1").style.columns = "100px 3";
+        }
+        function optionE() {
+            var pColum = document.getElementById("newspaper1");
+            pColum.className='';
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3> QUESTION 150</h3>
+    <p> You are building a web page for a newspaper publisher.</p>
+    <p>You have the following requirements:</p>
+    <ol>
+        <li>The web page should split the content into columns that are at least 100 pixels wide.</li>
+        <li>The number of columns displayed must be set by the browser.</li>
+    </ol>
+    You need to implement the correct CSS properties.
+    <br>
+    Which line of code should you use?
+    <xmp>
+        A. <div id="outer" style="width: 100px; column-fill: balance;">...</div><br>
+        B. <div id="outer" style="width: 100px; column-gap: lOpxr">...</div><br>
+        C. <div id="outer" style="column-width: 100px; ">...</div><br>
+        D. <div id="outer" style="width: 100px; columns: 100px 3">...</div><br>
+    </xmp>
+
+    Correct Answer: C
+    <br>
+    Section: Volume D <br>
+    Explanation <br>
+    Explanation/Reference: <br>
+
+    Explanation:
+    <xmp>
+        column-width
+
+        The width attribute specifies the width of a
+        <col> element.
+        Normally, a
+        <col> element takes up the space it needs to display the content.
+        The width attribute is used to set a predefined width of a
+        <col> element.
+
+        Syntax:
+        <col width="pixels|%|relative_length">
+    </xmp>
+    <h3>Comprobación</h3>
+    <h1>The columns Property</h1>
+    <p>The columns property is a shorthand property for column-width and column-count:</p>
+
+    <p><strong>Press Option C to Set the minimum width for each column to 100px,and the number of columns displayed setting by the browser.</strong></p>
+    <div id="newspaper1" >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue
+        nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus
+        legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii
+        legunt saepius.
+    </div>
+    <button onclick="optionA()">Option A</button>
+    <button onclick="optionB()">Option B</button>
+    <button onclick="optionC()">Option C</button>
+    <button onclick="optionD()">Option D</button>
+    <button onclick="optionE()">RESET</button>
+</body>
+
+</html>

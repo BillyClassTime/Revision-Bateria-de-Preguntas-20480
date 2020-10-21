@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q031</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <xmp>
+        QUESTION 31
+
+        You are creating a web form that users will use to enter their personal information. The form includes the
+        following HTML.
+
+        <body>
+            <table>
+                <tr>
+                    <td>Item</td>
+                    <td>Input</td>
+                    <td>Current</td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" I>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" I>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </body>
+
+        You have the following requirements:
+        When a user enters an input box, the cell on the right must turn green.
+        When a user leaves an input box, the cell on the right must turn white.
+
+        You need to create the web form to meet these requirements.
+
+        Which code segment should you use?
+        nth-child
+
+
+        A. 
+        $(document).ready(function () {
+            $('table td:nth-child(2) input').focus(
+                function () {
+                    $(this).parent().next().css
+                        ("background-color", "#00FF00");
+                });
+        $('table td:nth-child(2) input').blur(
+            function () {
+                $(this).parent().next().css
+                    ("background-color", "#FFFFFF");
+            });
+        });
+
+        B.         
+        
+        $(document).ready(function () {
+        $('table td:eq(2) input').focus(
+                function () {
+                    $(this).parent().next().css
+                        ("background-color", "#00FF00");
+                });
+        $('table td:eq(2) input').blur(
+            function () {
+                $(this).parent().parent.next().css
+                    ("background-color", "#FFFFFF");
+            });
+        });
+
+
+        C. 
+        $(document).ready(function () {
+            $('table td:eq(2) input').focus(
+                function () {
+                    $(this).parent().next().css
+                        ("background-color", "#00FF00");
+                });
+        $('table td:eq(2) input').blur(
+            function () {
+                $(this).parent().next().css
+                    ("background-color", "#FFFFFF");
+            });
+        });
+
+        D. 
+        $(document).ready(function () {
+            $('table td:nth-child(2) input').focus(
+                function () {
+                    $(this).parent.parent().next().css
+                        ("background-color", "#00FF00");
+                });
+        $('table td:nth-child(2) input').blur(
+            function () {
+                $(this).parent.parent().next().css
+                    ("background-color", "#FFFFFF");
+            });
+        });
+
+        Correct Answer: A
+        Section: Volume A
+        Explanation
+
+        Explanation/Reference:
+        Explanation:
+        The :nth-child(n) selector matches every element that is thenth child, regardless of type, of its parent.
+        n can be a number, a keyword, or a formula.
+
+        Example
+        Specify a background color for every <p> element that is the second child of its parent:
+            p:nth-child(2) {
+            background: #ff0000;
+            }
+            parent.next()
+            Here: thecell to the right of the current cell.
+            References:
+            https://www.w3schools.com/cssref/sel_nth-child.asp
+
+    Demostración:
+    </xmp>
+    <br><br>
+
+    <body>
+        <table>
+            <tr>
+                <td>Item</td>
+                <td>Input</td>
+                <td>Current</td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input type="text" I>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" I>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $('table td:nth-child(2) input').focus(
+                function () {
+                    $(this).parent().next().css
+                        ("background-color", "#00FF00");
+                });
+        $('table td:nth-child(2) input').blur(
+            function () {
+                $(this).parent().next().css
+                    ("background-color", "#FFFFFF");
+            });
+        });
+    </script>
+</body>
+
+</html>

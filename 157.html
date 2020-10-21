@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q157</title>
+</head>
+<script>
+    var optionA = () => {
+        /*var validateForm = function () {
+            var loanTermInput = docament.getElementsSyName("loanTermTextBox");
+            var loanTerm = parseFloat(loanTermInput.value) {
+                if (!isNaN(loanTerm) || loanTerm.toString() !== loanTermInput.value) {
+                alert("Loan Term must be an integer");
+                return false;
+            };
+            return true;
+        };*/
+        alert("UnCaught SyntaxError: Unexpected token '{'");
+    }
+    var optionB = () => {
+        try {
+            validateForm = function () {
+                var loanTermInput = document.getElementById("loanTermTextBoxB");
+                var loanTerm = parseInt(loanTermTextBox.text);
+                if (isNaN(loanTermInput)) {
+                    alert("Loan Term must be an integer");
+                    return false;
+                }
+                return true;
+            }();
+        } catch (error) {
+            //alert("Uncaught ReferenceError: loanTermTextBox is not defined");
+            alert(error);
+        }
+
+    }
+    var optionC = () => {
+        try {
+            var validateForm = function () {
+                var loanTermInput = document.getElementsByName("loanTermTextBoxC");
+                var loanTerm = JSON.parse(loanTermInput);
+                if (lisNaN(loanTerm) || loanTerm.toString() !== loanTermInput.value) {
+                    alert("Loan Term must be an integer");
+                    return false;
+                }
+                return true;
+            }();
+        } catch (error) {
+                alert(error);
+        }
+    }
+
+    var optionD = () => {
+        var validateForm = () => {
+            var loanTermInput = document.getElementById("loanTermTextBoxD");
+            var loanTerm = parseInt(loanTermInput.value, 10);
+            if (isNaN(loanTerm) || loanTerm.toString() !== loanTermInput.value) {
+                alert("Loan Term must be an integer");
+                return false;
+            }
+            return true;
+        }
+        validateForm();
+    }
+</script>
+
+<body>
+    <xmp>
+        QUESTION 157
+
+        You develop an HTML5 webpage that contains the following HTML markup:
+        <input id="loanTermTextBox" type="text" />
+        Users must enter a valid integer value into the text box.
+        You need to validate the data type that is received from the input element.
+        Which code segment should you use?
+
+        A. INCORRECTA
+        <script>
+            var validateForm = function () {
+            var loanTermInput = docament.getElementsSyName("loanTermTextBox");
+            var loanTerm = parseFloat(loanTermInput.value) {
+                if (!isNaN(loanTerm) || loanTerm.toString() !== loanTermInput.value) {
+                alert("Loan Term must be an integer");
+                return false;
+            };
+            return true;
+        };
+        </script>
+
+        B. INCORRECTA OJO al parentesis al final de la instruccion IF que falta
+        <script>
+            validateForm = function () {
+                var loanTermInput = document.getElementById("loanTermTextBox");
+                var loanTerm = parseInt(loanTermTextBox.text);
+                if (isNaN(loanTermInput)) {
+                    alert("Loan Term must be an integer");
+                    return false;
+                }
+                return true;
+            };
+        </script>
+
+        C. INCORRECTA El getElementsByName no encuentra el elemento buscado.
+        <script>
+            var validateForm = function () {
+                var loanTermInput = document.getElementsByName("loanTermTextBox");
+                var loanTerm = JSON.parse(loanTermInput);
+                if (lisNaN(loanTerm) || loanTerm.toString() !== loanTermInput.value) {
+                    alert("Loan Term must be an integer");
+                    return false;
+                }
+                return true;
+            };
+        </script>
+
+        D. CORRECTA
+        <script>
+            var validateForm = () => {
+            var loanTermInput = document.getElementById("loanTermTextBox");
+            var loanTerm = parseInt(loanTermInput.value, 10);
+            if (isNaN(loanTerm) || loanTerm.toString() !== loanTermInput.value) {
+                alert("Loan Term must be an integer");
+                return false;
+            }
+            return true;
+        };
+        </script>
+
+        Correct Answer: D
+
+        Section: Volume D
+        Explanation
+        Explanation/Reference:
+
+        Explanation:
+        parseInt
+        The parseInt() function parses a string and returns an integer.
+        Syntax: parseInt(string,radix)
+        string Required. The string to be parsed radix Optional. A number (from 2 to 36) that represents the numeral system to be used.
+        The isNaN() function determines whether a value is an illegal number (Not-a-Number).
+        This function returns true if the value is NaN, and false if not.
+
+        Reference:
+        https://www.w3schools.com/jsref/jsref_parseInt.asp
+        https://www.w3schools.com/jsref/jsref_isNaN.asp
+
+    </xmp>
+    <h3>Demostración: Debe entrar un valor y dar al comprobar </h3>
+    <label for="loanTermTexBoxA">Valor para la opcion A</label>
+    <input id="loanTermTextBoxA" type="text" /> <button onclick="optionA()">...</button>
+    <br>
+    <label for="loanTermTexBoxB">Valor para la opcion B</label>
+    <input id="loanTermTextBoxB" type="text" /> <button onclick="optionB()">...</button>
+    <br>
+    <label for="loanTermTexBoxC">Valor para la opcion C</label>
+    <input id="loanTermTextBoxC" type="text" /> <button onclick="optionC()">...</button>
+    <br>
+    <label for="loanTermTexBoxD">Valor para la opcion D</label>
+    <input id="loanTermTextBoxD" type="text" /> <button onclick="optionD()">...</button>
+    <br>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q003</title>
+</head>
+
+<body>
+    <xmp>
+        QUESTION 3
+
+        You are developing a customer contact form that will be displayed on a page of a company's website. The page
+        collects information about the customer.
+
+        If a customer enters a value before submitting the form, it must be a valid email address.
+
+        You need to ensure that the data validation requirement is met.
+
+        What should you use?
+
+        A. <input name="email" type="url" />
+        B. <input name="email" type="text" required="required" />
+        C. <input name="email" type="text" />
+        D. <input name="email" type="email" />
+
+        Correct Answer: D
+        Section: Module 4 Creating Forms to Collect and Validate User Input
+        Explanation
+        Explanation/Reference:
+        Explanation:
+        The <input type="email"> is used for input fields that should contain an e-mail address.
+
+        Depending on browser support, the e-mail address can be automatically validated when submitted.
+        Some smartphones recognize the email type, and adds ".com" to the keyboard to match email input.
+        Example:
+        <form>
+            E-mail:
+            <input type="email" name="email" />
+        </form>
+        Reference:
+        https://www.w3schools.com/TAGS/att_input_type.asp
+    </xmp>
+    <p>Comprobacion:</p>
+    <form action="#">
+        <label>A . email with type='url'</label>
+        <input name="email" type="url" /><br>
+        <label>B . email with type='text'</label>
+        <input name="email" type="text" required="required" /><br>
+        <label>C . email with type='text'</label>
+        <input name="email" type="text" /><br>
+        <label>D . email with type='email'</label>
+        <input name="email" type="email" /><br>
+        <br>
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>

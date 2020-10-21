@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q239</title>
+</head>
+
+<body>
+    <h2>QUESTION 239</h2>
+
+    DRAG DROP <br>
+    You develop code in JavaScript. The code calls a functions named <strong>fn1.</strong> <br>
+    Sometimes, <strong>fn1</strong> throws a RangeError on a SyntaxError error. <br>
+    You need to create code to meet the following requirements: <br>
+    <ul>
+        <li>
+            Catch the error.</li>
+        <li>
+            Call the catchRangeError function if RangeError is thrown.
+        </li>
+        <li>
+            Call the catchSyntaxError function if SyntaxError is thrown.
+        </li>
+    </ul>
+    Develop the solution by selecting and arranging the required code blocks in the correct order. You may not need
+    all of the code blocks. <br>
+
+    Select and Place: <br>
+    Code blocks <br>
+    <ul>
+        <li> try { </li>
+        <li> } catch (error) { </li>
+        <li> } </li>
+        <li> fn1(); </li>
+        <li> if (error.name ==== `RangeError`) { </li>
+        <li> catchSyntaxError(); } </li>
+        <li> else if (error.name === `syntaxError`) { </li>
+        <li> catchRangeError();}</li>
+    </ul>
+    <h3> Correct Answer: </h3>
+    <ul>
+        <li> try { </li>
+        <li> fn1(); </li>
+        <li> } catch (error) { </li>
+        <li> if (error.name ==== `RangeError`) { </li>
+        <li> catchRangeError();}</li>
+        <li> else if (error.name === `syntaxError`) { </li>
+        <li> catchSyntaxError(); } </li>
+        <li> } </li>
+    </ul>
+</body>
+
+</html>

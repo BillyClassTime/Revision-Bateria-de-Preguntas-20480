@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q099</title>
+    <style>
+        body {
+            font-size: large;
+        }
+        div {
+            width: 600px;
+            height: 600px;
+            background-color: chartreuse;
+        }
+    </style>
+    <script>
+        var myApp = {};
+        (function () {
+            this.drag = function (target, e) {
+                e.dataTransfer.setData("text", target.id);
+            };
+            this.drop = function (target, e) {
+                var id = e.dataTransfer.getData("text", target.id);
+                target.appendChild(document.getElementById(id));
+                e.preventDefault();
+            }
+        }).apply(myApp);
+    </script>
+
+</head>
+<body>
+    <xmp>
+        You develop an HTML5 application that allows img to be dragged and dropped within a webpage. The webpage
+        contains a DIV element and four IMG elements as defined in the code segment below:
+    </xmp>
+    <br />
+    <xmp>
+        <div ondrop="myApp.drop(this, event)" ondragenter="return false" ondragover="return false">
+            <p>Fruit</p>
+        </div>
+        <p>
+            <img src="./img/apple.jpg" id="apple" alt="Apple" ondragstart="myApp.drag(this, event)" draggable="true">
+            <img src="./img/orange.jpg" id="orange" alt="Orange" ondragstart="myApp.drag(this, event)"
+                draggable="true">
+            <img src="./img/strawberry.jpg" id="strawberry" alt="Strawberry" ondragstart="myApp.drag(this, event)"
+                draggable="true">
+            <img src="./img/banana.jpg" id="banana" alt="Banana" ondragstart="myApp.drag(this, event)"
+                draggable="true">
+        </p>
+    </xmp>
+    <br />
+    <p>
+        You need to enable drag and drop for the application.
+        How should you complete the relevant code? (To answer, select the appropriate option from each drop-down list in
+        the answer area.)
+    </p>
+    <xmp>
+        <script>
+            var myApp = {};
+            (function () {
+                this.drag = function (target, e) {
+                    e.dataTransfer.setData("text", target.id);
+                };
+                this.drop = function (target, e) {
+                    var id = e.dataTransfer.getData("text", target.id); (ERRATA EN LA BATERIA DE PREGUNTAS)
+                    target.appendChild(document.getElementById(id));
+                    e.preventDefault();
+                }
+            }).apply(myApp);
+        </script>
+    </xmp>
+
+    <p>
+        Explanation:
+        * setData method (dataTransfer)
+        Specifies the data and its format for the current drag-and-drop operation.
+        * getData method (dataTransfer)
+        Retrieves the specified formatted data from the current drag-and-drop operation.
+    </p>
+    <div ondrop="myApp.drop(this, event)" ondragenter="return false" ondragover="return false">
+        <p>Drag and Drop the Fruit here! please :)</p>
+    </div>
+    <p>
+        <img src="./img/apple.jpg" id="apple" alt="Apple" ondragstart="myApp.drag(this, event)" draggable="true">
+        <img src="./img/orange.jpg" id="orange" alt="Orange" ondragstart="myApp.drag(this, event)" draggable="true">
+        <img src="./img/strawberry.jpg" id="strawberry" alt="Strawberry" ondragstart="myApp.drag(this, event)"
+            draggable="true">
+        <img src="./img/banana.jpg" id="banana" alt="Banana" ondragstart="myApp.drag(this, event)" draggable="true">
+    </p>
+</body>
+
+</html>

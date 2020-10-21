@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>307</title>
+</head>
+
+<body>
+    <p>You have the following code.</p>
+    <xmp>
+        myLongFunction = new function() {
+        // ...
+        }
+    </xmp>
+    <p>You need to recommend a solution to ensure that myLongFunction is executed as a separate thread. Which type of
+        object should you use?</p>
+    <ol type="A">
+        <li>worker</li>
+        <li>reflect</li>
+        <li>prototype</li>
+        <li>eval</li>
+    </ol>
+    <p>Respuesta: A</p>
+    <p>worker: Un worker o webworker le permite descargar tareas de larga duración y de uso intensivo de datos en un
+        entorno
+        de ejecución independiente, distinto del de la página web, dejando el navegador libre para manejar la interfaz
+        de usuario.
+        Esto hace que la página web responda al usuario mientras el trabajador web realiza el procesamiento de datos
+        entre bastidores.</p>
+    <p>Respuestas incorrectas:</p>
+    <p>reflect:es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos
+        son los mismos que los de proxy handlers. Reflect no es un objeto de funciones y por lo tanto no puede ser
+        construido.</p>
+    <p>prototype:Todos los objetos en JavaScript heredan propiedade y metods desde prototipos</p>
+    <p>eval: Evalua o ejecuta un argumento. Si el argumento de eval() es una expresión, eval() evalua la expresión, si
+        es una sentencia, eval(), ejecuta la sentencia</p>
+
+    <div>Prueba de un Web worker</div>
+
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+        var w;
+    
+        function startWorker() {
+            if (typeof (Worker) !== "undefined") {
+                if (typeof (w) == "undefined") {
+                    w = new Worker("./307DemoWorkwer.js");
+                }
+                w.onmessage = function (event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+            }
+        }
+    
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
+
+</html>

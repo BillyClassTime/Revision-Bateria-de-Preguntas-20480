@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Q201</title>
+	<script>
+		function testNumber() {
+			testTooSmall(1);
+		}
+		function testNumberB() {
+			testTooSmallB(1);
+		}
+		function testNumberD() {
+			testTooSmallD(1);
+		}
+		function testTooSmall(n) {
+			if (n < 2)
+				throw "Oh not 'n' is too small!"
+			return true;
+		}
+		function testTooSmallB(n) {
+			if (n < 2)
+				throw new eval("Oh not 'n' is too small!")
+			return true;
+		}
+		function testTooSmallD(n) {
+			if (n < 2)
+				throw new Error("Oh not 'n' is too small!")
+			return true;
+		}
+
+		function testActual() {
+			try {
+				testNumber();
+			}
+			catch (e) {
+				alert(e.stack);
+			}
+		}
+
+		function testA() {
+			try {
+				testNumber();
+			}
+			catch (e) {
+				alert(e.message);
+			}
+		}
+
+		function testB() {
+			try {
+				testNumberB();
+			}
+			catch (e) {
+				alert(e.stack);
+			}
+		}
+
+		function testC() {
+			try {
+				testNumber();
+			}
+			catch (e) {
+				alert(e);
+			}
+		}
+
+		function testD() {
+			try {
+				testNumberD();
+			}
+			catch (e) {
+				alert(e.stack);
+			}
+		}
+
+	</script>
+	<style>
+		p {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>QUESTION 201</h3>
+	<div>You have the following code. (Line numbers are included for reference only.)</div>
+	<img src="./img/201..jpg" alt="pregunta 201">
+	<div>
+		You execute the code and you receive an alert that displays the following message: <strong>'undefined'</strong>.
+	</div> <br>
+	You need to ensure that the alert displays as shown:
+	<div>
+		<img src="./img/201A..jpg" alt="">
+	</div>
+	<h4>What should you do?</h4>
+	<p>A.</p>Replace line 13 with the following code:<strong>alert(e.message);</strong>
+	<p>B.</p> Replace line 06 with the following code:<strong>throw new eval("Oh no! 'n' is too small!")</strong>
+	<p>C.</p> Replace line 13 with the following code:<strong>alert(e);</strong>
+	<p>D.</p> Replace line 06 with the following code:<strong>throw new Error("oh no! 'n' is too small!")</strong>
+	<h4>Correct Answer: D </h4>
+	Volume D Explanation
+	Explanation Reference: <br>
+	Explanation: http://www.javascriotkit.com/javatutors/trvcatch2.shtml
+	<br><br>
+	<button onclick="testActual()">Test Actual</button>
+	<button onclick="testA()">Test opcion A</button>
+	<button onclick="testB()">Test opcion B</button>
+	<button onclick="testC()">Test opcion C</button>
+	<button onclick="testD()">Test opcion D</button>
+</body>
+
+</html>

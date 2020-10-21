@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q252</title>
+    <script>
+        var product = 'car';
+        function displayGlobalProduct() {
+            'use strict';
+            var product = 'boat';
+            alert(eval('product'));
+        }// displayGlobalProduct();
+
+        function optionA() {
+            'use strict';
+            var product = 'boat';
+            alert(eval(displayGlobalProduct, 'product'));
+        } 
+
+        function optionB() {
+            'use strict';
+            var product = 'boat';
+            alert(window.eval(product));
+        } 
+
+        function optionC() {
+            'use strict';
+            var product = 'boat';
+            alert(window.eval('product'));
+        } 
+
+        function optionD() {
+            'use strict';
+            var product = 'boat';
+            alert(eval(call('product')));
+        } 
+
+        function optionE() {
+            'use strict';
+            var product = 'boat';
+            alert(eval.call(null,product));
+        } 
+
+    </script>
+</head>
+
+<body>
+    <h2>QUESTION 252</h2>
+    You have the following code. <br>
+    <xmp>
+        var product = 'car';
+        function displayGlobalProduct() {
+            'use strict';
+            var product = 'boat';
+            alert(eval('product'));
+        } displayGlobalProduct();
+    </xmp>
+    You discover that the displayGlobalProduct function displays a value of boat. <br>
+    You need to change the function to display a value of car. <br>
+    Which line of code can you use to replace the alert? <br>
+    <ol>
+        <li>A. alert(eval(displayGlobalProduct, 'product'));</li>
+        <li>B .alert(window.eval(product));</li>
+        <li>C. alert(window.eval('product'));</li>
+        <li>D .alert(eval(call('product')));</li>
+        <li>E. alert (eval. call(null, product));</li>
+    </ol>
+    <h3>Correct Answer: C</h3>
+    Explanation: <br>
+    References: http://www.endmemo.com/js/eval.php <br>
+    <h3>Comprobación</h3>
+    Abrir el depurador para ver los fallos en las diferentes opciones <br>
+    <button onclick="displayGlobalProduct()">Opcion Inicial</button>
+    <button onclick=optionA()>Opcion A</button>
+    <button onclick=optionB()>Opcion B</button>
+    <button onclick=optionC()>Opcion C</button>
+    <button onclick=optionD()>Opcion D</button>
+    <button onclick=optionE()>Opcion E</button>
+</body>
+
+</html>

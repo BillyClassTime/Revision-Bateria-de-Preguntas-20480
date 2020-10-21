@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q069</title>
+    <style>
+        body {
+            font-size: large;
+        }
+        div {
+            width: 600px;
+            height: 100px;
+            border-block-color: blue;
+        }
+    </style>
+    <script>
+        function optionA() {
+            var ptext = document.getElementById("textShadow");
+            ptext.style.textShadow = "72pt 0pt 5pt";
+        }
+        function optionB() {
+            var ptext = document.getElementById("textShadow");
+            ptext.style.textShadow = "5px 1in 0px";
+        }
+
+        function optionC() {
+            var ptext = document.getElementById("textShadow");
+            ptext.style.textShadow="72pt 0em 5px";
+        }
+
+        function optionD() {
+            var ptext = document.getElementById("textShadow");
+            ptext.style.textShadow="100px 0px 5px";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>QUESTION 69</h3>
+    <p>You are developing an HTML5 page that includes several paragraph elements.</p>
+    <p>You have the following requirements:</p>
+    <ol>
+        <li>Add a drop shadow that is one inch below the text in the paragraph</li>
+        <li>Set the radius of the drop shadow to five pixels
+        </li>
+    </ol>
+    <p>You need to style the paragraphs to meet the requirements.
+        Which CSS style should you use?
+    </p>
+    <ol>
+        <li>A. Text-shadow: 72pt 0pt 5pt</li>
+        <li>B. Text-shadow: 5px 1in 0px;</li>
+        <li>C. Text-shadow: 72pt 0em 5px;</li>
+        <li>D. Text-shadow: 100px 0px 5px;</li>
+    </ol>
+    Correct Answer: B
+    <br>
+    Section: Volume B
+    Explanation
+    Explanation/Reference:
+
+    Explanation:
+    We set the second argument (vertical) to one inch (1in).
+
+    <em>Note</em>
+    Syntax
+    <xmp>
+        <style>
+            h1 {
+                text-shadow: h-shadow v-shadow blur color;
+            }
+        </style>
+        Note: The text-shadow property attaches one or more shadows to text. The property is a comma-separated list of
+        shadows, each specified by 2 or 3 length values and an optional color. Omitted lengths are 0.
+        *h-shadow;
+        Required. The position of the horizontal shadow. Negative values are allowed
+        * v-shadow
+        Required. The position of the vertical shadow. Negative values are allowed
+        * blur
+        Optional. The blur distance
+        * color
+        Optional. The color of the shadow.
+    </xmp>
+    <p>Comprobación</p>
+    <p id="textShadow">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <button onclick="optionA()">Option A</button>
+    <button onclick="optionB()">Option B</button>
+    <button onclick="optionC()">Option C</button>
+    <button onclick="optionD()">Option D</button>
+</body>
+
+</html>

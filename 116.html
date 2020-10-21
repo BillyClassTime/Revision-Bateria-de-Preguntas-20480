@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q116</title>
+    <style>
+        body {
+            font-size:larger;
+        }
+
+        .yesnogrid {
+            width: 350px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .yesnogrid>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1 {
+            grid-column: 1 / span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>QUESTION 116</h3>
+    <p>HOTSPOT</p>
+    <p>
+        You troubleshoot a webpage that includes the following code segment:</p>
+    <xmp>
+        <script>
+            var customer = function () {
+                var name = "contoso";
+                return {
+                    getName: function () {
+                        return name;
+                    },
+                    setName: function (newName) {
+                        name = newName;
+                    }
+                };
+            }();
+            alert(customer.name);
+        </script>
+    </xmp>
+    <p>
+        You need to evaluate the value of the variable named customer.name.</p>
+    <p>
+        For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p>
+    <p>
+        NOTE: Each correct selection is worth one point.</p>
+
+    <!--id="red" style="background-color:red; border:dashed;"-->
+    <!-- id="yellow" style="background-color:greenyellow;" -->
+    <div class="yesnogrid">
+        <div>Description customer.name variable </div>
+        <div>yes</div>
+        <div>no</div>
+        <div>an error will be thrown</div>
+        <div>_</div>
+        <div>X</div>
+        <div>Contoso</div>
+        <div>_</div>
+        <div>X</div>
+        <div>undifined</div>
+        <div>X</div>
+        <div>_</div>
+        <div>null</div>
+        <div>_</div>
+        <div>X</div>
+        <div>false</div>
+        <div>_</div>
+        <div>X</div>
+    </div>
+    <br>
+    <p>Correct answer:</p>
+    <br>
+    Section: Volume C
+    Explanation
+    Explanation/Reference:
+    <br>
+    Explanation:
+    <p>
+        The variable customer is undefined, as it outside the scope of the function, at line alert(customer.name);
+    </p>
+    <script>
+        var customer = function () {
+            var name = "contoso";
+            return {
+                getName: function () {
+                    return name;
+                },
+                setName: function (newName) {
+                    name = newName;
+                }
+            };
+        }();
+        alert(customer.name);
+    </script>
+</body>
+
+</html>

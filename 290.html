@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Q290</title>
+</head>
+
+<body>
+    <p>You have the following code</p>
+    <xmp>
+        <script>
+            parseObj = function (thename) {
+                var objToParse = '{"title":"myTitle","name":"'+thename+'"}';
+                return JSON.TARGET1(TARGET2, function (k, v) {
+                    if (k == "name" && !v)
+                        v = TARGET3;
+                    return v;
+                });
+            }
+        </script>
+    </xmp>
+    <p>You need to parse the objToParse string to ensure that the returned object has a name property equal to “_empty_”
+        if the name variable is empty.
+        How should you complete the code? To answer, drag the appropriate code elements to the correct. targets. Each
+        code elements may be used once, more than once. or not at all. You may need to drag the split bar between panes or
+        scroll to  view content.
+    </p>
+    <xmp>
+        OPTION TO SELECTING (Drag and Drop) Target1. Target2, ...:
+        "_empty_";                                      (TARGET 3)
+        "name"
+        objToParse                                      (TARGET 2)
+        parse                                           (TARGET 1)
+        stringify
+        thename
+    </xmp>
+    <script>
+        parseObj = function (thename) {
+            var objToParse = '{"title":"myTitle","name":"'+ thename + '"}'; //"{"title":"myTitle","name":"undefined"}"
+            return JSO.parse(objToParse, function (k, v) {                  //k = "title", v = "myTitle"
+                if (k == "name" && !v)
+                    v = "_empty_";
+                return v;
+            });
+        }
+        parseObj();
+    </script>
+
+</body>
+
+</html>

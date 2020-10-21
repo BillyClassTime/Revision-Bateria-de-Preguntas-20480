@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 293</title>
+    <style>
+        .tile{
+             border-radius:100px/50px;
+             background:#a8dee7;
+             padding: 20px;
+             width: 200px;
+             height:150px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 293</h2><br />
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p><br />HOTSPOT<br /><br />
+
+                    You have a page that contains the following HTML5 markup.<br />
+
+                    <img src="./img/image494.jpeg" alt=""> <br /> <br />
+
+                    You need to set up the background of all the tile div elements as shown in the following exhibit.<br /> <br /> 
+
+                    <img src="./img/image495.jpeg" alt="">
+                    <br /><br />
+                    How should you set the CSS style for the div elements? To answer, select the appropriate options in
+                    the answer area.<br /><br />
+                    
+                    
+                    NOTE: Each correct selection is worth one point.<br /><br />
+
+                    Hot Area:<br /> <br />
+                    <img src="./img/image496.jpeg" alt=""><br /><br />
+
+                    Correct Answer:<br /> <br />
+                    <img src="./img/image497.jpeg" alt=""><br /><br />
+
+
+                    Section: Volume D <br /><br />
+
+                    Explanation<br /><br />
+
+
+                    Explanation/Reference:<br /><br />
+                </p>
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                Tomando todas las respuestas de la primera caja:<br />
+                <ul style="list-style: none;">
+                    <li>1. #tile - no puede ser ya que el simbolo "#" se usa para id<br /></li>
+                    <li>2. .tile - esta es la opción correcta ya que todas las div tienen esta clase<br /></li>
+                    <li>3. body #tile - no puede ser ya que nuevamente se usa "#" que es para id<br /></li>
+                    <li>4. tile - esto no puede ser ya que no es un elemento del DOM.<br /></li>
+                </ul>
+                <br />
+                Tomando todas las respuestas de la primera caja:<br />
+                <ul style="list-style: none;">
+                    <li>1. border - esta propiedad solo define por si sola la propiedad del borde del elemento<br /></li>
+                    <li>2. border-radius - esta es la opción correcta ya los div tienen las esquinas redondeadas las cuales se definen
+                           por esta propiedad.<br /></li>
+                    <li>3. border-style - está propiedad define el estilo y no ya sea dotted, dashed y otras más que se refieren a la líneas 
+                           del border que no se aplica a lo pedido en el ejercicio<br /></li>
+                </ul>
+                <br /><br />
+                <h3 style="color:red">Respuesta: .tile y border-radius</h3>
+                <xmp>
+                    <style>
+                        .tile{
+                             border-radius:100px/50px;
+                             background:#a8dee7;
+                             padding: 20px;
+                             width: 200px;
+                             height:150px;
+                        }
+                    </style>
+                </xmp>
+                <br /><br />
+                Representación gráfica de la respuesta:<br /><br />
+                <div id="tile1" class="tile"></div>
+                <div id="tile1" class="tile"></div>
+
+                <br /><br />
+                <h3 style="color:red">Fuentes:</h3>
+                Para mostrar las propiedad del border-radius: https://www.w3schools.com/cssref/css3_pr_border-radius.asp
+            </td>
+        </tr>
+    </table>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

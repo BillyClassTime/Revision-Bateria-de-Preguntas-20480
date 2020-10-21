@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Q018</title>
+</head>
+
+<body>
+	<xmp>
+		QUESTION 18
+		HOTSPOT
+		You are developing a page by using HTML. You have the following HTML markup within the page.
+
+		<nav id="mainmenu" class="page-nav">
+			<div id="navlist" class="container">
+				<a href="index.html">Home</a>
+				<a href="register.html">Register</a>
+			</div>
+		</nav>
+
+		You need to dynamically add the following HTML markup to the list of links.
+		<a href=" help.html">Help</a>
+
+		The new link must appear last on the list.
+		How should you complete the JavaScript code? To answer, select the appropriate options in the answer
+		area. NOTE: Each correct selection is worth one point.
+
+		Hot Area:
+		Answer Area
+
+		<script>
+			function addNacvElement() {
+				var para = document.createElement("a");
+				var attr = document.createAttribute("href");
+				attr.value = "help.html";
+				para.setAttributeNode(attr);
+				var node = document.createTextNode("help");
+				para.appendChild(node);
+				var element = document.getElementById("navlist");
+				element.appendChild(para);
+			}
+		</script>
+
+		<nav id="mainmenu" class="page-nav">
+			<div id="navlist" class="container">
+				<a href="index.html">Home</a>
+				<a href="register.html">Register</a>
+			</div>
+		</nav>
+
+		Section: Volume A
+		Explanation
+		Explanation/Reference:
+
+		Explanation:
+
+	</xmp>
+	<h4>Demostracion:</h4>
+	<nav id="mainmenu" class="page-nav">
+		<div id="navlist" class="container">
+			<a href="index.html">Home</a>
+			<a href="register.html">Register</a>
+		</div>
+	</nav>
+
+	<button onclick=" addNacvElement()">add menu help item</button>
+	<script>
+		function addNacvElement() {
+			var para = document.createElement("a");
+			var attr = document.createAttribute("href");
+			attr.value = "help.html";
+			//para.appendChild(attr);
+			//para.createAtributte(attr);
+			//para.createTextNode(attr);
+			para.setAttributeNode(attr);
+
+			//var node = document.appendchild("help");
+			/*var node = document.createAtributte("help");*/
+			var node = document.createTextNode("help");
+			//var node = document.SetAttributeNode("help");
+
+			para.appendChild(node);
+			/*var element = document.appendChild("Container");
+			var element= document.createTextNode=("mainmenu");*/
+			var element = document.getElementById("navlist");
+			//var element = document.getElementByClass("page-nav");
+			element.appendChild(para);
+		}
+	</script>
+</body>
+
+</html>

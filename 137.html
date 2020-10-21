@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q137</title>
+    <script>
+        var test = () => {
+            var myApp = {};
+            (function () {
+                this.loanAmount = 100;
+                this.display = function (value) {
+                    document.getElementById('display').innerHTML += value+", ";
+                };
+                this.increaseLoanAmount = function () {
+                    this.loanAmount += 1000;
+                    return;
+                };
+                this.increaseLoanAmountAgain = function () {
+                    this.loanAmount += 1000;
+                    return;
+                };
+            }).apply(myApp);
+            myApp.increaseLoanAmount();
+            myApp.increaseLoanAmountAgain();
+            myApp.display(myApp.loanAmount);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>QUESTION 137</h3>
+    DRAG DROP <br>
+    You are creating a function by using JavaScript.<br>
+    You have the following requirements:<br>
+    The function must display loan amounts to the user within the following HTML element:<br>
+    <xmp>
+        <div id="display"></div>
+    </xmp>
+    The loan amount of 2100 must display in the HTML element.<br>
+    All declared variables and functions must be scoped to the myApp variable.<br>
+    You need to implement the function.<br>
+    <p>
+        How should you complete the relevant code? To answer, drag the appropriate code segments to the correct targets.
+        Each tag may be used once, more than once, or not at all. You may need to drag the split bar between panes or
+        scroll to view content.</p>
+    <br>
+    NOTE: Each correct selection is worth one point.
+    <br>
+    Select and Place: <br>
+    Code segments
+    <xmp>
+        this.loanAmount += 1000; (2)(3) OK
+        this.loanAmount = 100; (1) OK
+        loanAmount = 100;
+        loanAmount += 1000; 
+        myApp.loanAmount (4)
+        loanAmount
+    </xmp>
+    Answer Area
+    <xmp>
+        <script>
+            var myApp = {};
+            (function () {
+                this.loanAmount = 100;                       (1)
+                this.display = function (value) {
+                    document.getElementById('display').innerHTML += value;
+                };
+                this.increaseLoanAmount = function () {
+                    this.loanAmount += 1000;                 (2)
+                    return;
+                };
+                this.increaseLoanAmountAgain = function () {
+                    this.loanAmount += 1000;                 (3)
+                    return;
+                };
+            }).apply(myApp);
+            myApp.increaseLoanAmount();
+            myApp.increaseLoanAmountAgain();
+            myApp.display(myApp.loanAmount);                 (4)
+        </script>
+    </xmp>
+    Section: Volume C
+    Explanation
+    Explanation/Reference:
+    <h4>Demostración</h4>
+    <di id="display">Resultado aqui:</di><br><button onclick="test()">Test</button>
+</body>
+
+</html>

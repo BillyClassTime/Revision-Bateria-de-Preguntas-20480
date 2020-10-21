@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q317</title>
+</head>
+
+<body>
+    <h2>QUESTION 317</h2>
+    You need to store more than 1 MB of key/value pairs on a local client computer. The solution must meet the following
+    requirements: <br>
+    <ol>
+        <li>The data must persist even if the user of the computer works offline.</li>
+        <li>The solution must use the least amount of development effort.</li>
+    </ol>
+    <h3>What should you use?</h3>
+    <ol>
+        <li>A. the sessionStorage API</li>
+        <li>B. the File API</li>
+        <li>C. the localStorage API</li>
+        <li>D. cookies</li>
+    </ol>
+    
+    <h3>Correct Answer: C</h3>
+    Explanation:
+    <p>
+    The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data
+    is saved across browser sessions. <br>
+    localStorage is similar to sessionStorage, except that while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when the page session ends — that is, when the page is closed.</p>
+    References: <br>
+    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage <br>
+
+</body>
+
+</html>

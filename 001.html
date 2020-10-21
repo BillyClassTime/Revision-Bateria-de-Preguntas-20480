@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q001</title>
+    <style>
+        textarea {
+            width: 550px;
+            height: 100px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function actualizar() {
+            document.getElementById("resultado").innerHTML = document.getElementById("respuesta").innerHTML.trim();
+        }
+        $(document).ready(function () {
+            actualizar();
+        });
+        function optionA() {
+            document.getElementById("respuesta").innerHTML='<div id="Div1"></div><span id="Span1"></span>';
+            document.getElementById("Div1").appendChild(document.getElementById("Span1"));
+            actualizar();
+        }
+        function optionB() {
+            document.getElementById("respuesta").innerHTML='<div id="Div1"></div><span id="Span1"></span>';
+            var moveElement = $("#Span1").remove();
+            $("#Div1").append(moveElement);
+            actualizar();
+        }
+        function optionC() {
+            document.getElementById("respuesta").innerHTML='<div id="Div1"></div><span id="Span1"></span>';
+            $("#Span1").wrap($("#Div1"));
+            actualizar();
+        }
+        function optionD() {
+            document.getElementById("respuesta").innerHTML='<div id="Div1"></div><span id="Span1"></span>';
+            var moveElement = document.getElementById("Span1");
+            moveElement.parentNode.appendChild(moveElement);
+            actualizar();
+        }
+    </script>
+</head>
+
+<body>
+    You have a webpage that includes the following markup:
+
+    <xmp>
+        <IDOCTYPE html>
+            <html>
+
+            <head>
+                <script src="jquery.js"></script>
+                <script>
+                </script>
+            </head>
+
+            <body>
+                <div id="Div1"></div>
+                <span id="Span1"></span>
+            </body>
+
+            </html>
+            When the page is loaded, the SPAN element must be moved as follows:
+            <div id="Div1"><span id="Span1"></span></div>
+    </xmp>
+    <div>
+        You need to move the SPAN element and preserve any event handlers attached to the SPAN.
+        Which code segment should you use?
+    </div>
+    <br>
+
+    Option A
+    <xmp>
+        <script>
+            document.getElementById("Div1").appendChild(document.getElementById("Span1"));
+        </script>
+    </xmp>
+    Option B
+    <xmp>
+        <script>
+            var moveElement = $("#Span1").remove();
+            $("#Div1").append(moveElement);
+        </script>
+    </xmp>
+    Option C
+    <xmp>
+        <script>
+            $("#Span1").wrap($("#Div1"));
+        </script>
+    </xmp>
+    Option D
+    <xmp>
+        <script>
+            var moveElement = document.getElementById("Span1");
+            moveElement.parentNode.appendChild(moveElement);
+        </script>
+    </xmp>
+    <p>
+    Respuestas : A y B (ERRATA no es A es A y B)
+    </p>
+    <p>
+    Explanation/Reference:
+    Reference:
+    https://www.w3schools.com/jsref/met_node_appendchild.asp
+    </p>
+    <p>Comprobación:</p>
+    <div id=respuesta>
+        <div id="Div1"></div>
+        <span id="Span1"></span>
+    </div>
+    <textarea readonly id="resultado"></textarea>
+
+    <br>
+    <button onclick="optionA()">Option A</button>
+    <button onclick="optionB()">Option B</button>
+    <button onclick="optionC()">Option C</button>
+    <button onclick="optionD()">Option D</button>
+</body>
+
+</html>

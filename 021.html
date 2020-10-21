@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q021</title>
+</head>
+
+<body>
+
+    <h3> QUESTION 21</h3>
+    <p>
+        HOTSPOT
+        <br>
+        You have the following markup.'
+    </p>
+    <xmp>
+
+        <body>
+            <div>
+                <label for="username">User Name: </label>
+                <input type="text" id="username" onblur="CheckUserName()"> </div>
+            <div>
+                <input type="submit" id="submit" I>
+            </div>
+        </body>
+
+    </xmp>
+    <p>
+        For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+        <br>
+        NOTE: Each correct selection is worth one point.
+        <br>
+        Hot Area:
+        <br>
+        Statement Yes/No
+    </p>
+    <h4>The CheckUserName function will be called when the user leaves the userName field. (YES) </h4>
+    <h4>The CheckUserName function will be called every time a letter is typed in the userName field. (NO)</h4>
+    <h4>The CheckUserName function will be called when the user clicks the submit button. (NO)</h4>
+    Section: Volume A
+    Explanation
+    Explanation/Reference:
+    The onblur attribute fires the moment that the element loses focus.
+    Reference:
+    https://www.w3schools.com/tags/ev_onblur.asp
+    <p>Demostración></p>
+    <xmp>
+        <div>
+            <label for="username">User Name: </label>
+            <input type="text" id="username" onblur="CheckUserName()"> </div>
+        <div>
+            <input type="submit" id="submit" I>
+        </div>
+        <script>
+            function CheckUserName() {
+                alert(document.getElementById("username").value);
+            }
+        </script>
+    </xmp>
+    <div>
+        <label for="username">User Name: </label>
+        <input type="text" id="username" onblur="CheckUserName()"> </div>
+    <div>
+        <input type="submit" id="submit" I>
+    </div>
+    <script>
+        function CheckUserName() {
+            alert(document.getElementById("username").value);
+        }
+    </script>
+</body>
+
+</html>

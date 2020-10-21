@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Q133</title>
+	<style>
+		body {
+			font-size: large;
+		}
+
+		.yesnogrid {
+			width: 1600px;
+			/*font-size: medium;*/
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			grid-gap: 10px;
+			background-color: #2196F3;
+			padding: 10px;
+		}
+
+		.yesnogrid>div {
+			background-color: rgba(255, 255, 255, 0.8);
+			text-align: left;
+			/*padding: 20px 0;*/
+			/*font-size: x-large;*/
+		}
+
+		.item1 {
+			grid-row: 1 / span 4;
+			font-size:medium;
+			text-align: left;
+		}
+	</style>
+	<style type="text/css">
+		.container {
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: 1fr 1fr 1fr;
+			grid-column: 1fr 1fr 1fr;
+			-ms-grid-rows: 1fr 1fr 1fr;
+			grid-row: 1fr 1fr 1fr;
+		}
+
+		.blueBox {
+			-ms-grid-row: 2;
+			grid-row: 2;
+			-ms-grid-column: 2;
+			grid-column: 2;
+			-ms-wrap-flow: auto;
+			float: none;
+			background-color: blue;
+		}
+
+		.text {
+			-ms-grid-row: 1;
+			grid-row: 1;
+			-ms-grid-column: 1;
+			grid-column: 1;
+			-ms-grid-column-span: 3;
+			column-span: 3;
+			-ms-grid-row-span: 3;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>QUESTION 133</h3>
+	<xmp>
+		<!DOCTYPE html>
+		<html>
+
+		<head>
+			<style type="text/css">
+				.container {
+					display: -ms-grid;
+					display: grid;
+					-ms-grid-columns: 1fr 1fr 1fr;
+					grid-column: 1fr 1fr 1fr;
+					-ms-grid-rows: 1fr 1fr 1fr;
+					grid-row: 1fr 1fr 1fr;
+				}
+
+				.blueBox {
+					-ms-grid-row: 2;
+					grid-row: 2;
+					-ms-grid-column: 2;
+					grid-column: 2;
+					-ms-wrap-flow: auto;
+					float: none;
+					background-color: blue;
+				}
+
+				.text {
+					-ms-grid-row: 1;
+					grid-row: 1;
+					-ms-grid-column: 1;
+					grid-column: 1;
+					-ms-grid-column-span: 3;
+					column-span: 3;
+					-ms-grid-row-span: 3;
+				}
+			</style>
+		</head>
+
+		<body>
+			<div class="body">
+				<div name="container" class="container">
+					<div class="content">content content content content content content content </div>
+					<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+					<div class="blueBox">blueBox blueBox blueBox blueBox blueBox blueBox blueBox </div>
+					<div>Dignissimos autem nisi eveniet iure adipisci aliquam. </div>
+					<div>Magni dolore dicta temporibus a error? Corrupti dolorum officia molestiae </div>
+					<div class="text">text text text text text text text text text text text text </div>
+					<div>ullam quia a, voluptas doloribus!</div>
+				</div>
+			</div>
+		</body>
+
+		</html>
+	</xmp>
+
+	<p>How does the page render? For each statement in the table,select Yes if the behavior is described.</p>
+	<p>Select No if it is not. Make only one selection in each column. </p>
+	Hot Area: YES NO
+	<div class="yesnogrid">
+		<div class="item1">
+			<xmp>
+				<style type="text/css">
+					.container {
+						display: -ms-grid;
+						display: grid;
+						-ms-grid-columns: 1fr 1fr 1fr;
+						grid-column: 1fr 1fr 1fr;
+						-ms-grid-rows: 1fr 1fr 1fr;
+						grid-row: 1fr 1fr 1fr;
+					}
+
+					.blueBox {
+						-ms-grid-row: 2;
+						grid-row: 2;
+						-ms-grid-column: 2;
+						grid-column: 2;
+						-ms-wrap-flow: auto;
+						float: none;
+						background-color: blue;
+					}
+
+					.text {
+						-ms-grid-row: 1;
+						grid-row: 1;
+						-ms-grid-column: 1;
+						grid-column: 1;
+						-ms-grid-column-span: 3;
+						column-span: 3;
+						-ms-grid-row-span: 3;
+					}
+				</style>
+			</xmp>
+		</div>
+		<div>Yes</div>
+		<div>No</div>
+		<div>Sentence</div>
+		<div>_</div>
+		<div>X</div>
+		<div>Content in the DIV element named <strong>content</strong> flows around all sides of the DIV
+			element named <strong>blueBox</strong> </div>
+		<div>X</div>
+		<div>_</div>
+		<div>The DIV element named <strong>blueBox</strong> will always be displayed at row 2, column 2 of the grid. ERRATA
+		</div>
+		<div>_</div>
+		<div>X</div>
+		<div>Content in the DIV element named <strong>content</strong> will fill all cells in the grid</div>
+	</div>
+	</div>
+
+	<p>Comprobación</p><br>
+	<div class="body">
+		<div name="container" class="container">
+			<div class="content">content content content content content content content </div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+			<div class="blueBox">blueBox blueBox blueBox blueBox blueBox blueBox blueBox </div>
+			<div>Dignissimos autem nisi eveniet iure adipisci aliquam. </div>
+			<div>Magni dolore dicta temporibus a error? Corrupti dolorum officia molestiae </div>
+			<div class="text">text text text text text text text text text text text text </div>
+			<div>ullam quia a, voluptas doloribus!</div>
+		</div>
+	</div>
+</body>
+
+</html>
