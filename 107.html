@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q107</title>
+    <script>
+        function readXMLFile() {
+            if (window.XMLHttpRequest) 
+                xmlhttp = new XMLHttpRequest();
+            else
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            xmlhttp.open("GET", "./message.xml", false);
+            xmlhttp.send();
+            xmlDoc = xmlhttp.responseXML;
+            if (xmlhttp.status === 200) {
+                document.getElementById("to").innerHTML =
+                    xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+                document.getElementById("from").innerHTML =
+                    xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+                document.getElementById("message").innerHTML =
+                    xmlDoc.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+            }
+        }
+    </script>
+</head>
+<body onload="readXMLFile()">
+    <div id="to" value="too"></div><br>
+    <div id="from"></div><br>
+    <div id="message"></div><br>
+</body>
+</html>
+
+<!--
+    <body onload="readXMLFile()">
+    to: <div id="to" value="too"></div><br>
+    from: <div id="from"></div><br>
+    message: <div id="message"></div><br>
+    <input type="button" onclick="readXMLFile()" value="Cargar"></input><br>
+</body>
+-->
+<!-- 
+    //false=sincronico, true=asincronico
+            /*request.onreadystatechange = function () {
+                if (request.readyState === 4) {
+                    try {
+                        xmlDoc = request.responseXML;
+
+                        if (request.status === 200) {
+                            document.getElementById("to").innerHTML =
+                                xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+                            document.getElementById("from").innerHTML =
+                                xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+                            document.getElementById("message").innerHTML =
+                                xmlDoc.getElementsByTagName("message")[0].childNodes[0].nodeValue;
+                            //xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+                        }
+                    } catch (exception) {
+                        alert(exception);
+                    }
+                }
+            };*/
+-->
