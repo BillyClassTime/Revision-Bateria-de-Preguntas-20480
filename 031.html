@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q031</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('table td:nth-child(2) input').focus(
+                function () {
+                    $(this).parent().next().css
+                        ("background-color", "#00FF00");
+                });
+        $('table td:nth-child(2) input').blur(
+            function () {
+                $(this).parent().next().css
+                    ("background-color", "#FFFFFF");
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -153,20 +167,7 @@
             </tr>
         </table>
     </body>
-    <script>
-        $(document).ready(function () {
-            $('table td:nth-child(2) input').focus(
-                function () {
-                    $(this).parent().next().css
-                        ("background-color", "#00FF00");
-                });
-        $('table td:nth-child(2) input').blur(
-            function () {
-                $(this).parent().next().css
-                    ("background-color", "#FFFFFF");
-            });
-        });
-    </script>
+  
 </body>
 
 </html>

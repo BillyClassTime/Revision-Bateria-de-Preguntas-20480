@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 38</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 38</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>DRAG DROP<br /><br />
+                    
+                    You are developing a website that has many web pages with hyperlinks to other
+                    sites.<br /><br />
+                    
+                    You need to ensure that if a hyperlink contains an image, the linked web page opens in a
+                    new window.<br /><br />
+                    
+                    Which jQuery code segment or segments should you use? (To answer, drag the appropriate
+                    line of code to the correct location. Each line of code may be used once, more than once, or not at all. You may
+                    need to drag the split bar between panes or scroll to view content.)<br /><br />
+                    
+                    Select and Place:<br /><br />
+
+                    <img src="./img/image61.jpg" alt="">
+                    <br /><br />
+                    Correct Answer:<br /> <br /> 
+
+                    <img src="./img/image62.jpg" alt="">
+                    <br /><br />                   
+                    
+                    Section: Volume A<br /><br />
+
+
+                    Explanation<br /><br />
+                    
+                    Explanation/Reference:<br /><br />
+                    
+                    Explanation:<br /><br />
+                    * a img<br />
+                    All elements that are descendants of an element.<br /><br />
+                    * (this).parent<br />
+                    
+                    This is the element and is the parent.<br />
+                </p>
+
+                <br /><br />
+                <hr><br />
+                <h2 style="color:red">Explicación</h2><br />
+                <p>Este ejercicio esta relacionado con tres definiciones relacionadas con métodos:</p>
+                <ul style="list-style: none;">
+                    <li>
+                        <strong>1. El método .each(function) en la expresión ().each(function):</strong><br /><br />
+                        El método .each() itera sobre un objeto jQuery, ejecutando una función para cada elemento coincidente.<br />
+                        El método .each() está diseñado para hacer que las construcciones de bucles DOM sean concisas y menos propensas
+                        a errores. Cuando se llama, itera sobre los elementos DOM que forman parte del objeto jQuery. Cada vez que se
+                        ejecuta la devolución de llamada, se pasa la iteración del bucle actual, comenzando desde 0. Más importante aún,
+                        la devolución de llamada se activa en el contexto del elemento DOM actual, por lo que la palabra clave this se
+                        refiere al elemento.
+                        <br /><br />
+                    </li>
+                    <li>
+                        <strong>2. El método .parent([selector]). en la expresión $(this).parent().:</strong><br /><br />
+                        El método .parent() obtiene el padre de cada elemento en el conjunto actual de elementos coincidentes,
+                        opcionalmente filtrado por un selector. <br />
+                        Dado un objeto jQuery que representa un conjunto de elementos DOM, el método parent()
+                        atraviesa al padre inmediato de cada uno de estos elementos en el árbol DOM y construye un nuevo objeto
+                        jQuery a partir de los elementos coincidentes.<br /><br />
+                        <strong>Selector - </strong> Una cadena que contiene una expresión de selector para hacer coincidir los
+                        elementos.<br /><br />
+                        <br />
+                    </li>
+                    <li>
+                        <strong>3. El método .attr(attributeName) en la expresión .attr('target', '_blank'):</strong><br /><br />
+                        El método .attr() obtiene el valor de un atributo para el primer elemento del conjunto de elementos
+                        coincidentes o emparejado con uno o más atributos para cada elemento coincidente. <br />
+                        El método .attr() obtiene el valor del atributo solo para el primer elemento del conjunto coincidente. Para
+                        obtener el valor de cada elemento individualmente, use una construcción de bucle como el método .each() o
+                         .map() de jQuery.<br /><br />
+                         Ver o ir a:<strong> https://api.jquery.com/attr/ </strong> para explorar todos los parámetros que toma el método
+                         ya que hay los que coinciden con los parámetros de este ejercicio.<br /><br />
+                        <br />
+                    </li>
+                </ul>
+                <p>
+                    Con las definiciones anteriores podemos deducir que lo primero que tenemos que hacer es hacer un parser sobre todo
+                    el DOM identificando todos los elementos anchor "&lt;a&gt; &lt;/a&gt;" y de ahí ver si entre ellos hay elementos
+                    que su valor entre las etiquetas anchor "&lt;a&gt; <strong>valor</strong> &lt;/a&gt;" hay una imagen "&lt;img&gt;" que al hacerla
+                    clic esta abre el vínculo escrito en "href"  en una página nueva. Entre las opciones expuestas primero tenemos que escoger
+                    la función .each() y el método .parent() , es obvio que la opción es .each(). Por eso las opciones 2da y 4ta 
+                    no son parte de la primera línea de código. <br /><br />
+                    La segunda linea de código que se busca es una función que se ejecuta para cada .each(). Aquí tenemos que buscar el
+                    atributo de la etiqueta que buscamos, en esta caso el anchor "&lt;a&gt; <strong>valor</strong> &lt;/a&gt;" y para ser más 
+                    concreto su child dentro que es "&lt;img&gt;". 
+                    De las opciones restantes la única opción es la segunda. ESto se explica ya que esta opción se refiere al .parent() que este 
+                    caso es el "this" que llama a este método. Como el que llama a este método es ('a img') se obtendría el anchor y la 
+                    imagen correspondiente para la cual se modifica el atributo con la expresión "attr('target','_blank') 
+                    que son las condiciones del ejercicio.
+                </p>
+                <p>Un ejemplo claro del target = "_blank" se puede ver en: <strong>https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_a_target</strong>
+                </p>
+                <br /><br />
+                <h2 style="color:red">Respuesta:</h2>
+
+                <p>Con todo lo expuesto anteriormente el order el orden de las líneas de código de la función a definir sería </p>
+                    <img src="./img/lineasCodigo.jpg" alt="">
+                <br /><br />
+                <p><strong>Para visualizar el script que da el resultado correcto ver el código fuente de esta página.</strong>
+                    El ejercicio sugiere que cuando se haga clic sobre la imagen encapsulada en el anchor "&lt;a&gt; <strong>valor</strong> &lt;/a&gt;"
+                    la página que abrirá es la "href='www.microsoft.com'" en el navegador en una nueva pestaña o nueva página.
+                </p>
+                <br />
+                <h3>Mostrando la respuesta al ejercicio de manera gráfica podemos ver:</h3>
+                <div style="display: flex; justify-content: center;">
+                    <a href="http://www.microsoft.com">
+                        <img src="./img/gatitos.jpg" alt="">
+                    </a>
+                </div>
+
+
+
+                <br /><br />
+                <h2 style="color:red">Fuentes:</h2><br />
+                https://api.jquery.com/each/ <br />
+                https://www.w3schools.com/jquery/traversing_parents.asp <br />
+                https://api.jquery.com/attr/ <br />
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <script>
+        $(document).ready(function () {
+            $('a img').each(function (){
+                $(this).parent().attr('target', '_blank')
+            });
+        });
+    </script>
+    <br />
+</body>
+</html>

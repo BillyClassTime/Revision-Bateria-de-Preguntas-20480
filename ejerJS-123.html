@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 123</title>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 123</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You develop a web application by using jQuery. You develop the following jQuery code: (Line numbers
+                    are included for reference only.)<br /><br />
+                    <div>
+                        <img src="./img/image194.jpg" alt="">
+                    </div>
+                    The web application exposes a RESTful web API that has an endpoint of/product/create.
+                    You need to create a new product by using AJAX.<br /><br />
+                    
+                    Which code segment should you insert at line 05?<br /><br /> <br /><br />
+                    <div>
+                        <img src="./img/image195.jpg" alt="">
+                    </div>
+                    A. Option A<br />
+                    B. Option B<br />
+                    C. Option C<br />
+                    D. Option D<br /><br />
+                    
+                    Correct Answer: D<br /><br />
+                    
+                    
+                    Section: Volume C Explanation<br /><br />
+                    
+                    Explanation/Reference:<br /><br />
+                    
+                    Explanation:<br /><br />
+                    
+                    * url:/product/create This is the endproduct.<br /><br />
+                    
+                    * datatype: The type of data that you're expecting back from the server.<br /><br />
+                    
+                    * contentType (default: 'application/x-www-form-urlencoded; charset=UTF-8')<br />
+                    
+                    Reference:<br /><br />
+                    http://api.jquery.com/jQuery.ajax/<br />
+                </p>
+
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                Este ejercicio esta relacionado con la definición, funcionamiento y demás del metodo <span
+                    style="font-size: medium; color:red;">$.ajax()</span>.
+                <h3 style="color:red">El método $.ajax()</h3>
+                jQuery proporciona otro método para realizar peticiones Ajax al servidor, la diferencia es que este método se puede
+                utilizar para peticiones get o post, y para elegir entre muchas opciones diferentes que vamos a explicar a
+                continuación.<br /><br />
+                
+                Para seleccionar entre las distintas opciones, se utiliza un objeto configurable. El objeto configurable es sólo un
+                objeto de JavaScript con un montón de valores que sirven para configurar las necesidades de nuestra petición Ajax.
+                Podemos imaginarnos un objeto Javascript con varias propiedas.<br /><br />
+                
+                A través de las propiedades podemos especificar un montón de opciones diferentes, lo que hace que el método
+                <span style="font-size: medium; color:red;">$.ajax()</span> sea mucho más versátil.
+                El método <span style="font-size: medium; color:red;">$.ajax()</span> cuenta con dos sintaxis posibles:<br /><br />
+                $.ajax(url, { objeto-configurable } );<br /><br />
+                
+                // o<br /><br />
+                
+                $.ajax( { objeto-configurable } );<br /><br />
+                
+                En la primera sintaxis, se especifica la url a la que enviar la petición Ajax, y luego se pasa el objeto configurable, y
+                en la segunda, se pasa directamente el objeto, que también contendrá la dirección url de la petición.<br /><br />
+
+                El objeto configurable contendrá uno o varios de los parámetros siguientes:
+                <ul>
+                    <li>url : dirección a la que se envía la petición.</li>
+                    <li>type : tipo de la petición, GET o POST (GET por defecto).</li>
+                    <li>data : datos a enviar al servidor.</li>
+                    <li>dataType : tipo de datos que esperas obtener del servidor (si no se especifica, jQuery intenta averiguar de qué tipo se
+                        trata).</li>
+                    <li>success : función que se ejecuta cuando se obtiene una respuesta con éxito.</li>
+                    <li>error : función que se llama si la petición no tiene éxito.</li>
+                    <li> contentType (default: 'application/x-www-form-urlencoded; charset=UTF-8'). Es de tipo Boolean or String.<br />
+                        Cuando se envía datos al servidor se usa content type. El Default es 
+                        "application/x-www-form-urlencoded; charset=UTF-8", que es más correcto en la mayoría de casos. <br />
+                        Si se pasa de manera explicita el content-type en el <span style="font-size: medium; color:red;">$.ajax()</span>, 
+                        entonces siempre es enviado al servidor (aunque no se envíe ningún dato).</li>
+                </ul>
+
+                Hay muchas otras opciones que pueden ser pasadas como parámetro del objeto. Puedes encontrar la lista completa en la
+                documentación oficial de jQuery.
+                
+                <br /><br />
+                <h2 style="color:red">Respuesta:</h2>
+                <p> Lo expuesto anteriormente descarta las opciones A y B ya que el "contenType" definidos
+                    en estas opciones está dado por defecto en el metodo.
+                </p>
+                <p> La opción C no puede ser ya que la url del producto tiene que ser "url: '/product/create'"
+                    y no "url: '/product/create/post'" ya que el post es el método de enviar. Además GET está
+                    dado por defecto y no habría necesidad de definirlo, como es hecho en la opción B.
+                    Por otro lado el API no define datos XML o al menos no se especifica en el ejercicio.
+                </p>
+                <p>Por lo tanto la respuesta correcta en la opción D.</p>
+                <br /><br />
+                <h2 style="color:red">Fuentes:</h2><br />
+                https://openclassrooms.com/en/courses/4309491-simplifica-tus-proyectos-con-jquery/4981961-el-metodo-ajax <br />
+                https://api.jquery.com/jQuery.ajax/<br />
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <script>
+
+    </script>
+    <br />
+</body>
+
+</html>

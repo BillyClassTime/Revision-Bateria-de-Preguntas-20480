@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr; 
+}
+
+.blueBox{
+  -ms-grid-row:2;
+  -ms-grid-column:2;
+  -ms-wrap-flow: auto;
+  float: none;
+  background-color: blue;
+}
+
+.text {
+  -ms-grid-row:1;
+  -ms-grid-column:1;
+  -ms-grid-column-span:3;
+  -ms-grid-row-span:3;
+}
+
+div {
+  border: solid 1px black;
+  margin: 10px;
+  padding: 10px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div name="container" class="container">
+            <div name="blueBox" class="blueBox">
+                BLUE BOX
+            </div>
+            <div name="content" class="text">
+                CONTENT - CLASS=TEXT
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

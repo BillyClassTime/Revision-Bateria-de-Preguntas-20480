@@ -23,6 +23,7 @@
             };
             this.drop = function (target, e) {
                 var id = e.dataTransfer.getData("text", target.id);
+                //var id = e.dataTransfer.getData("text");
                 target.appendChild(document.getElementById(id));
                 e.preventDefault();
             }
@@ -64,7 +65,8 @@
                     e.dataTransfer.setData("text", target.id);
                 };
                 this.drop = function (target, e) {
-                    var id = e.dataTransfer.getData("text", target.id); (ERRATA EN LA BATERIA DE PREGUNTAS)
+                    var id = e.dataTransfer.getData("text", target.id); //(Funciona con esta linea)
+                    //var id = e.dataTransfer.getData("text"); (Funciona con esta linea)
                     target.appendChild(document.getElementById(id));
                     e.preventDefault();
                 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 242</title>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 242</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You develop an application in HTML5. The application has a field named field1 that uses the month
+                    input type.<br />
+
+                    You need to identify what will occur if the application runs from a browser that does not support
+                    the month input type.<br />
+
+                    What should you identify?<br /><br />
+
+                    A. The field1 field will be rendered as a text box.<br />
+                    B. The field1 field will appear as a label named month.<br />
+                    C. The web page will display an error message.<br />
+                    D. The field1 field will not be displayed.<br /><br />
+
+                    Correct Answer: A <br />
+                    Section: Volume D<br /><br />
+
+
+                    Explanation<br /><br />
+
+                    Explanation/Reference:<br /><br />
+
+                    Explanation:<br /><br />
+
+                    Reference:
+                    https://stackoverflow.com/questions/18020950/how-to-make-input-type-date-supported-on-all-browsers-any-alternatives<br /><br />
+                </p>
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                Esto es solo una pregunta de compatibilidad del navegador. En HTML5 tal y como se explica en la respuesta y en la referenca
+                que se muestra al final solo los navegadores de última generación muestran el efecto de Input.<br /><br />
+                Lo más sencillo sería abrir esta página con los distintos navegadores y ver el efecto del propio Input Date.
+
+                <br /><br />
+                <h2 style="color:red">Respuesta:</h2>
+
+                <h1>Mostrando el control Input para mes (Month)</h1>
+
+                <p>Si el navegador lo soporta entonces una caja de dialogo para escoger la fecha saltará para escojer la fecha
+                    y poder escoger una entrada en el campo Input de fecha.</p>
+                
+                <form action="#">
+                  <label for="bdaymonth">Cumpleaños (mes y año):</label>
+                  <input type="month" id="bdaymonth" name="bdaymonth">
+                  <input type="submit">
+                </form>
+                
+                <p><strong>Note:</strong> El input del tipo 'type="month"' no es soportado por Firefox, Safari o Internet Explorer 11 
+                    y sus versiones anteriores.</p>
+                <br /><br />
+                <hr style="color:red; border: 3px solid red;">
+                <br /><br />
+                <h2>1. Mostrando el control Input en un navegador válido. En este caso usamos <span style="color:red;">Chrome</span> </h2>
+                <div style="border: 5px solid #555;">
+                    <img src="./img/dateInput.jpg" alt="">
+                </div>
+                <br /><br />
+                <h2>2. Mostrando el control Input en un navegador NO VÁLIDO. En este caso usamos <span style="color: red;">Firefox</span></h2>
+                <div style="border: 5px solid #555;">
+                    <img src="./img/dateInput2.jpg" alt="">
+                </div>
+                
+
+
+                <br /><br />
+                <h2 style="color:red">Fuentes:</h2>
+                https://www.w3schools.com/tags/att_input_type_month.asp
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <script>
+
+    </script>
+    <br />
+
+
+</body>
+
+</html>

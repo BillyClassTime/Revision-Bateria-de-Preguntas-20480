@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 225</title>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 225</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You need to write a self-executing anonymous function in JavaScript. Which code snippet should you
+                    include in the function?<br /><br />
+                <div>
+                    <img src="./img/image357.jpg" alt="">
+                </div>
+                A. Option A<br />
+                B. Option B<br />
+                C. Option C<br />
+                D. Option D<br /><br />
+
+                Correct Answer: D <br /><br />
+
+
+                Section: Volume D<br /><br />
+
+                Explanation<br /><br />
+
+                Explanation/Reference:<br /><br />
+
+                References:<br /><br />
+
+                http://esbueno.noahstokes.com/post/77292606977/self-executing-anonymous-functions-or-how-to-write<br /><br />
+                </p>
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                El arte de la función anónima autoejecutable.<br /><br />
+
+                (function(){<br />
+                    console.log('¡Hola mundo!');<br />
+                  })();<br /><br />
+
+                Al observar el código detenidamente veremos que se compone de dos partes clave.<br /><br />
+
+                
+                <ul style="list-style: none;">
+                    <il><span style="font-weight: 800; color: red;">1. Primero está la función anónima:</span><br /><br /></il>
+                    <il>(función(){<br />
+                        // El código normal va aquí<br />
+                        })<br /><br /></il>
+                    <il><span style="font-weight: 800; color: red;">2. La parte realmente interesante es lo que sucede cuando 
+                        agregamos esto justo al final:</span><br /><br /></il>
+                    <il>();<br />
+                        Esos dos pequeños paréntesis hacen que todo lo contenido en las llaves anteriores se ejecute
+                        inmediatamente.<br />
+                    </il>
+                </ul>
+                Lo que es útil aquí es que JavaScript tiene un alcance a nivel de función. Todas las
+                variables y funciones definidas dentro de la función anónima no están disponibles para el código fuera
+                de ella, utilizando el cierre de manera efectiva para aislarse del mundo exterior.
+                <br /><br />
+
+                <br /><br />
+                <h2 style="color:red">Respuesta:</h2>
+
+                <p>Por lo expuesto anteriormente vemos primero que la función es anónima por que no lleva nombre.
+                    Esto elimina las opcionces B y C.<br /><br />
+                    
+                    Para que la función se auto ejecute tiene que llevar la sintaxis de ejecución por ejemplos:
+                    <span style="font-weight: 800; color: red;">function ();</span>  es decir que los paréntesis al final tienen
+                    que aparecer. Esto elimina la opción A.<br /><br />
+
+                    Por lo tanto la respuesta correcta es la opcion D.
+                </p><br />
+                <p> Ejecutando el siguiente código en esta página en la correspondiente etiqueta "script"</p>
+
+                &lt;script&gt;<br /><br />
+                    (function (window) {<br />
+                        var foo = 'Hello';<br />
+                        var bar = 'World!'<br /><br />
+            
+                        function baz() {<br />
+                            return foo + ' ' + bar;<br />
+                        }<br /><br />
+            
+                        //En este contexto, 'window' se refiere a un parametro<br />
+                        window.baz = baz;<br />
+                        console.log(baz()); // usando la función anónima y visualizando en la consola<br />
+                    })(window); //Pasando como referencia el objeto global window<br /><br />
+                &lt;/script&gt;
+
+                <p>
+                    La respuesta visual del script anterior se puede ver en el siguiente parráfo que es cargado dinámimente:<br /><br />
+                    <p id="demo"></p>
+                </p>
+
+
+                <br /><br />
+                <h2 style="color:red">Fuentes:</h2>
+                http://markdalgleish.com/2011/03/self-executing-anonymous-functions/
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <script>
+        (function (window) {
+            var foo = 'Hello';
+            var bar = 'World!'
+
+            function baz() {
+                return foo + ' ' + bar;
+            }
+
+            //En este contexto, 'window' se refiere a un parametro
+            window.baz = baz;
+            console.log(baz()); // usando la función anónima y visualizando en la consola
+        })(window); //Pasando como referencia el objeto global window
+        
+    </script>
+    <br />
+</body>
+
+</html>

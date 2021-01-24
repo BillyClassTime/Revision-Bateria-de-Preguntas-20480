@@ -1,0 +1,112 @@
+<!DOCTYPE html><br />
+<html lang="en"><br />
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0"><br />
+    <title>Javascript Ejercicio - 191</title><br />
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 191</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You are developing an HTML5 web application. The application loads data from a web service by using
+                    AJAX. The application displays the data by calling the displayData function. The data is loaded by using the
+                    following code.<br /><br />
+                    
+                    You need to ensure that the data is displayed when it is successfully retrieved
+                    from the web service. Which code segment should you use?<br /><br />
+                    <img src="./img/image304.jpg" alt="">
+                    <br /><br />
+                    A. Option A<br />
+                    B. Option B<br />
+                    C. Option C<br />
+                    D. Option D<br /><br />
+                    
+                    Correct Answer: D <br /><br />
+                    
+                    Section: Volume D<br /><br />
+
+                    Explanation<br /><br />
+                    
+                    Explanation/Reference:<br /><br />
+                    
+                    Explanation:<br /><br />
+                    
+                    The deferred.done() method accepts one or more arguments, all of which can be either a single function or an array of functions. When the
+                    Deferred is resolved, the doneCallbacks are called. Callbacks are executed in the order they were added. Since
+                    deferred.done() returns the deferred object, other methods of the deferred object can be chained to
+                    this one, including additional .done() methods.<br /><br />
+                    
+                    $.ajax
+                    <br /><br />
+                    <br />Reference:<br /><br />
+                    
+                    https://api.jquery.com/deferred.done/<br /><br />
+                    </p>
+                    
+                    <br /><br />
+                    <hr>
+                    <h2 style="color:red">Explicación</h2>
+                    Esta pregunta tiene que ver con el Objeto diferido (deferred object).<br /><br />
+                    
+                    En JavaScript, es común invocar funciones que opcionalmente aceptan devoluciones de llamada que se llaman dentro de esa
+                    función. Por ejemplo, en las versiones anteriores a jQuery 1.5, los procesos asincrónicos como jQuery.ajax () aceptan
+                    devoluciones de llamada para que se invoquen en un futuro cercano cuando se complete el éxito, el error y la
+                    finalización de la solicitud ajax.
+                    
+                    El objeto Deferred, introducido en jQuery 1.5, es un objeto de utilidad encadenable creado al llamar al método
+                    jQuery.Deferred (). Puede registrar múltiples devoluciones de llamada en colas de devolución de llamada, invocar colas
+                    de devolución de llamada y transmitir el estado de éxito o falla de cualquier función sincrónica o
+                    asincrónica.<br /><br />
+                    
+                    El objeto diferido se puede encadenar, de forma similar a como se puede encadenar un objeto jQuery, pero tiene sus
+                    propios métodos. Después de crear un objeto diferido, puede utilizar cualquiera de los métodos siguientes ya sea
+                    encadenando directamente desde la creación del objeto o guardando el objeto en una variable e invocando uno o más
+                    métodos en esa variable.<br /><br />
+                    
+                    Entre los métodos que cuenta el deferred object estan: <br /><br />
+                    
+                    <ul>
+                        <li>deferred.always() - Agrega controladores a los que llamara cuando objeto diferido es resuelto o rechazado.</li>
+                        <li>deferred.fail() - Agrega controladores a los que se llamará cuando se rechace el objeto diferido.</li>
+                        <li>deferred.done() - Agrega controladores a los que se llamará cuando se resuelva el objeto diferido.</li>
+                        <li>deferred.notify() - llama a progressCallbacks en un objeto Deferred con los argumentos dados.</li>
+                        <li>deferred.notifyWith() - Llama a progressCallbacks en un objeto Deferred con el contexto y los argumentos dados.</li>
+                        <li>deferred.pipe() - Método de utilidad para filtrar y/o encadenar diferidos.</li>
+                        <li>deferred.progress() - Agrega controladores a los que se llamará cuando el objeto diferido genere notificaciones de progreso.</li>
+                        <li>deferred.promise() - Devuelve un objeto Promesa diferida.</li>
+                    </ul>
+                    
+                    <br /><br />
+                    <h2 style="color:red">Respuesta:</h2>
+                    <p>Ya que la aplicación carga datos desde un servicio web usando AJAX, tenemos llamadas asincrónicas.
+                        Luego se mantiene que la aplicación muestra los datos al llamar a la función displyData.
+                        Esta última se implementa en una callback función ya que como asíncrona no sabemos cuando resultará su respuesta.
+                        El método que puede llamar múltiples callbacks funciones de manera encadenable, es el método .done() del deferred object.
+                        No podemos usar el método .always() ya que se nos pide en el enunciado que debemos asegurarnos que los datos
+                        se muestran cuando son satisfactoriamente recibidos. .always() tiene la opción del rechazo por eso no debemos coger esta
+                        opción. 
+                    </p>
+                    <p> Las opciones B y C son métodos que no implementan ninguna llamada asíncronica de algún método.</p>
+                    <p>Por lo antes expuesto anteriormente la respuesta es la opción D.</p>
+                <br /><br />
+
+                <h2 style="color:red">Fuentes:</h2><br /><br />
+                https://api.jquery.com/jQuery.Deferred/<br />
+                https://www.sitepoint.com/introduction-jquery-deferred-objects/
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <script>
+
+    </script>
+    <br />
+
+</body>
+</html>

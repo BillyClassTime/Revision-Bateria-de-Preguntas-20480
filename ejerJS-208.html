@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 208</title>
+</head>
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 208</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You need to parse an XML formatted string. Which object should you use?<br /><br />
+                    
+                    A. Map<br />
+                    B. DataView<br />
+                    C. DOMParser<br />
+                    D. JSON<br /><br />
+                    
+                    Correct Answer: C <br /><br />
+                    
+                    Section: Volume D<br /><br />
+
+                    Explanation<br /><br />
+                    
+                    Explanation/Reference:<br /><br />
+                </p>
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                Esto es solo una pregunta teórica. Todos los navegadores principales tienen un analizador XML
+                incorporado para acceder y manipular XML.<br /><br />
+                El DOM XML (Document Object Model) define las propiedades y métodos para acceder y editar XML.<br /><br />
+                
+                Sin embargo, antes de poder acceder a un documento XML, debe cargarse en un objeto DOM XML.<br /><br />
+                
+                Todos los navegadores modernos tienen un analizador XML integrado que puede convertir texto en un objeto DOM XML.<br /><br />
+                                
+                <br /><br />
+                <h2 style="color:red">Respuesta:</h2>
+
+                Por lo tanto la respuesta correcta es la D. A continuación una respuesta gráfica y con código de lo antes expuesto.<br /><br />
+
+                Lo primero que haremos es crear un parráfo que vamos a cargar de forma dinámica. Para ello haremos uso de un script. En este 
+                definimos un texto XML el cual lo recuperamos con una variable llamada "text". <br />
+                Seguidamente instanciamos un analizador llamado "parser" del DOMparser(), es decir creamos un 
+                objeto analizador del DOM.<br />
+                Este objeto se utiliza para definir el tipo de texto que vamos a analizar "text/xml" y al 
+                mismo tiempo le pasamos el texto a analizar que es nuestro texto XML "text".<br />
+                El resultado de lo anterior se asigna a una nueva variable "xmlDoc".<br />
+                Esta última se utiliza para llegar hasta la rama del XML que queremos que en este caso es "title". 
+                Lo cual se le asigna al documento utilizando "getElementById("demo") para pintarlo en el HTML por medio de "innerHTML".<br /><br />
+                Todo lo expuesto se muestra aquí abajo.<br /><br />
+
+
+                &lt;p&gt;id="demo"&gt;&lt;/p&gt;
+                <br /><br />
+                &lt;script&gt;<br />
+                <p style="text-indent:40px;">var text, parser, xmlDoc;</p>
+                <p style="text-indent:40px;"> text = "&lt;bookstore&gt;&lt;book&gt;" +</p>
+                <p style="text-indent:40px;">"&lt;title&gt;Everyday Italian&lt;/title&gt;" +</p>
+                <p style="text-indent:40px;">"&lt;author&gt;Giada De Laurentiis&lt;/author&gt;" +</p>
+                <p style="text-indent:40px;">"&lt;year&gt;2005&lt;/year&gt;" +</p>
+                <p style="text-indent:40px;">"&lt;/book&gt;&lt;/bookstore&gt;";</p>
+                <p style="text-indent:40px;">parser = new DOMParser();<br /></p>
+                <p style="text-indent:40px;">xmlDoc = parser.parseFromString(text,"text/xml");<br /></p>
+                <p style="text-indent:40px;">document.getElementById("demo").innerHTML =<br /> </p>
+                <p style="text-indent:40px;">xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;<br /></p>
+                &lt;/script&gt;
+                <br /><br />
+                <hr style="border: 3px solid; color: red;">
+                <h3>Texto extraído del XML:</h3>
+                <p id="demo"></p>
+                <br /><br />
+                <h2 style="color:red">Fuentes:</h2>
+                https://www.w3schools.com/xml/xml_parser.asp
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <script>
+        var parser, xmlDoc;
+        var text = "<bookstore><book>" +
+        "<title>Everyday Italian</title>" +
+        "<author>Giada De Laurentiis</author>" +
+        "<year>2005</year>" +
+        "</book></bookstore>";
+        
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text,"text/xml");
+        
+        document.getElementById("demo").innerHTML = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        </script>
+    <br />
+
+</body>
+
+</html>

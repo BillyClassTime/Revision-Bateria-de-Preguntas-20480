@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><br />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Javascript Ejercicio - 89</title>
+    <style>
+        #dataTable tbody tr.selected:not(:last-child) {
+            background: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style='text-align:center;'>Ejercicio No 89</h2><br />
+
+    <table style="width:80%;margin-left:auto;margin-right:auto;">
+        <tr>
+            <td>
+                <p>You are implementing an application by using HTML5 and JavaScript. A web page contains the following
+                    HTML table.<br /><br />
+
+                    <img src="./img/image116.jpg" alt="">
+                    <br /><br />
+                    The application must:<br /><br />
+                <ul>
+                    <li>
+                        Identify all rows in the table body that have a class attribute of selected<br />
+                    </li>
+                    <li>
+                        Exclude the last selected row in the table<br />
+                    </li>
+                </ul>
+
+                <br />
+                You need to implement the web page according to the requirements.<br /><br />
+
+                Which CSS selector should you use?<br /><br />
+
+                A. tr:not(tr:last-child).selected &lt; #dataTable<br />
+                B. #dataTable &gt; tr.selected:not(tr:last-child)<br />
+                C. #dataTable tbody tr.selected:not(tr:last-child)<br />
+                D. #dataTable tr.selected:not(tr:last-child)<br /><br />
+
+
+                Correct Answer: C<br /><br />
+
+                Section: Volume B<br />
+                Explanation<br /><br />
+
+                Explanation/Reference:<br /><br />
+
+                Explanation:<br /><br />
+                [attribute] [target]<br /><br />
+
+                Selects all elements with a target attribute<br />
+                :not(selector) not(p)<br />
+
+                Selects every element that is not a &lt;p&gt; element<br /><br />
+
+
+                References:<br /><br />
+                https://www.w3schools.com/cssref/css_selectors.asp<br />
+                </p>
+
+                <br /><br />
+                <hr>
+                <h2 style="color:red">Explicación</h2>
+                <p>La opción A no tiene lógica ya que el orden de la declaración de un estilo comienza
+                    con la etiqueta, clase y en este caso tendría que ser el ID.<br />
+                </p>
+                <p>La segunda opción B usa el selector ">" que se aplicar para solo seleccionar hijos directos.
+                    En HTML, los navegadores agregan implícitamente un elemento tbody dentro del cual 
+                    contener los elementos "tr", por lo que, en realidad, "tr" nunca es un elemento/hijo directo de table.
+                    <br />
+                </p>
+                <p>
+                    La opción D tiene parte de la misma explicación de la opción B. "tr" no es un child
+                    directo de table. 
+                </p>
+                <br />
+
+                <h2 style="color:red">Respuesta:</h2>
+
+                <h3>Mostrando visualmente la respuesta:</h3>
+                
+                 <p>   La opción C es la opción correcta. Para poder visualizar la respuesta hemos creado un tabla tal y como es 
+                    dada y además hemos agregado un estilo que rellena el background de las filas con color para poder demostrar
+                    que solo para las filas con class="selected" se colorea el fondo sin tomar en cuenta el último child. <br />
+                </p>
+                <p>
+                    El estilo en el head tiene la siguiente descripción:<br /><br />
+                    &lt;style&gt;<br />
+                    <p>#dataTable tbody tr.selected:not(:last-child) {</p>
+                        <p style="text-indent: 50px;">background: chartreuse;</p>
+                        <p style="text-indent: 25px;">}</p>
+                    &lt;/style&gt;
+                </p>
+                <h4>La tabla entonces se muestra como sigue:</h4>
+                <div style="display: flex; justify-content: center;">
+                    <table id="dataTable" style="border: 2px solid #555;">
+                        <tbody>
+                            <tr>
+                                <td>Esto No tiene selected</td>
+                            </tr>
+                            <tr class="selected">
+                                <td>Esto SI tiene selected</td>
+                            </tr>
+                            <tr>
+                                <td>Esto No tiene selected</td>
+                            </tr>
+                            <tr class="selected">
+                                <td>Esto SI tiene selected</td>
+                            </tr>
+                            <tr>
+                                <td>Esto No tiene selected</td>
+                            </tr>
+                            <tr class="selected">
+                                <td>Esto SI tiene selected, último del tbody</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="selected">
+                                <td>En el tfoot: esto Si tiene selected</td>
+                            </tr>
+                            <tr class="selected">
+                                <td>En el tfoot: esto Si tiene selected</td>
+                            </tr>
+                            <tr class="selected">
+                                <td>En el tfoot: esto Si tiene selected</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <br /><br />
+                <h2 style="color:red">Fuentes:</h2>
+                https://www.w3schools.com/cssref/css_selectors.asp<br />
+                https://code.tutsplus.com/es/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
+
+                <br /><br />
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+
+    <script>
+
+    </script>
+    <br />
+</body>
+
+</html>
