@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q93</title>
+    <style>
+        form, h1, div, ul {
+            padding-left: 58px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <ul id="languages">
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>Classic ASP</li>
+        <li>ASP.Net</li>
+    </ul>
+    <div>Test 
+    <button onclick="functionSortList()">Ordenar lista</button>
+    </div>
+    <script>
+        function functionSortList(){
+            var languages = [];
+            var items = document.getElementsByTagName("li");
+            for (var i = 0, l = items.length; i < l; i++) {
+                languages.push(items[i].innerHTML);
+            }
+            languages.sort();
+            for (var i = 0, l = items.length; i < l; i++){
+                items[i].innerHTML = languages[i];
+            }    
+        }
+    </script>
+    
+
+</body>
+
+</html>
+</body>
+</html>
